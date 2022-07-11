@@ -1,0 +1,105 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main_background"
+    tools:context=".ResultActivity">
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/bg_background"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="textPersonName"
+        android:text="@string/editTextTextPersonName"
+        android:textAlignment="center"
+        android:textColor="#ffff"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+        <Button
+            android:id="@+id/bt_Sport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:padding="20dp"
+            android:text="@string/bt_Sport"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:textColor="@color/dialogColor"
+            android:textSize="22sp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName"/>
+
+
+        <Button
+            android:id="@+id/bt_Music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:padding="20dp"
+            android:text="@string/bt_Music"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:textColor="@color/dialogColor"
+            android:textSize="22sp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/bt_Sport"/>
+
+        <Button
+            android:id="@+id/bt_Movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:padding="20dp"
+            android:text="@string/bt_Movies"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:textColor="@color/dialogColor"
+            android:textSize="22sp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/bt_Music"/>
+        <Button
+            android:id="@+id/bt_Science"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:padding="20dp"
+            android:text="@string/bt_Science"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:textColor="@color/dialogColor"
+            android:textSize="22sp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/bt_Movies"/>
+
+        <Button
+            android:id="@+id/bt_Technology"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="#2196F3"
+            android:padding="20dp"
+            android:text="@string/bt_Technology"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:textColor="@color/dialogColor"
+            android:textSize="22sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_Science"
+            />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:gravity="center"
+    tools:context=".PlayActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="40dp"
+        android:layout_height="470dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center_horizontal"
+            android:src="@drawable/logo_trivia_night"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/bt_play"
+            android:layout_width="250dp"
+            android:layout_height="176dp"
+            android:layout_gravity="center"
+            android:background="@drawable/play_game_bt1"
+            android:padding="30dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

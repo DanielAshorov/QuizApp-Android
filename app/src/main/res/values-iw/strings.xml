@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">טריויה </string>
+    <string name="language">he</string>
+    <string name="get_started_text">בואו נתחיל</string>
+    <string name="sub_title_opening">משחק טריוויה שמעשיר ידע</string>
+    <string name="title_text_opening">חשוב. שחק. נצח</string>
+    <string name="Return_home_button_text"> חזור הביתה</string>
+    <string name="out_of_text">שאלה:</string>
+    <string name="true_button">נכון</string>
+    <string name="false_button">לא נכון</string>
+    <string name="next_button">הבא</string>
+    <string name="correct_answer">תשובה נכונה</string>
+    <string name="incorrect">תשובה לא נכונה</string>
+    <string name="email_hint">מייל</string>
+    <string name="password_hint">סיסמא</string>
+    <string name="login_text">להתחבר</string>
+    <string name="create_text">להירשם</string>
+    <string name="or_text">או</string>
+    <string name="username_hint">שם משתמש</string>
+    <string name="or_text_">או</string>
+    <string name="valid_password">סיסמא צריכה להכיל 6 תווים לפחות</string>
+    <string name="wait_login">כבר מתחברים..</string>
+    <string name="wrong_details">פרטים שגויים\nנסו שנית..</string>
+    <string name="empty_fields">נא למלא את השדות הריקים</string>
+    <string name="valid_email">הזינו כתובת מייל חוקית</string>
+    <string name="server_error">בעיה בשרת\nנסה שנית</string>
+    <string name="correct_password">סיסמא שגויה</string>
+    <string name="correct_email_address">כתובת מייל שגויה</string>
+    <string name="score_text2">ניקוד נוכחי: </string>
+    <string name="button_return_home">חזור לדף הבית</string>
+    <string name = "editTextTextPersonName">בחר קטגוריה: </string>
+    <string name = "bt_Sport">ספורט </string>
+    <string name = "bt_Music">מוזיקה </string>
+    <string name = "bt_Movies">סרטים </string>
+    <string name = "bt_Science">מדע </string>
+    <string name = "bt_Technology">  טכנולוגיה</string>
+    <string name = "txtTotalQuestion">שאלות: </string>
+    <string name = "txtScore">ציון: 0</string>
+    <string name = "button_Next">מאשר </string>
+    <string name = "txt_result_title">תוצאות של הטריויה </string>
+    <string name = "result_tv_HighScore">ניקוד גבוה:  </string>
+    <string name = "result_tv_Num_of_Ques">סה"כ שאלות: </string>
+    <string name = "result_tv_correct_Ques">נכון:   </string>
+    <string name = "result_tv_wrong_Ques">לא נכון:  </string>
+    <string name = "bt_result_main_menu">תפריט ראשי:  </string>
+    <string name = "txt_correct_dialog">נכון  </string>
+    <string name = "textView_Score">ניקוד :  </string>
+    <string name = "txt_correct_dialog_ok"> אוקי  </string>
+    <string name = "txt_wrong_dialog"> טעות  </string>
+    <string name = "textView_Correct_Answer">תוצאה סופית:  </string>
+    <string name = "txt_wrong_dialog_ok">אוקי  </string>
+    <string name = "txt_finalScore">תוצאה סופית  </string>
+    <string name = "bt_finalScore_ok">אוקי  </string>
+    <string name = "txt_TimesUp">הזמן עבר! </string>
+    <string name = "txt_GameOver">המשחק נגמר  </string>
+    <string name = "bt_Times_ok">אוקי  </string>
+
+
+
+</resources>

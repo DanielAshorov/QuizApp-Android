@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "751954200303",
+    "project_id": "quiztrivia-fb578",
+    "storage_bucket": "quiztrivia-fb578.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751954200303:android:e7e81e04f92a7b150d7d1a",
+        "android_client_info": {
+          "package_name": "com.example.quizapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751954200303-5l08plrb12lcl1hkqak4l1brnlqv1388.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnnuIkbv1egXNp_AHleUuwk_CoFFcBRxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751954200303-5l08plrb12lcl1hkqak4l1brnlqv1388.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

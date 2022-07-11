@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="330dp"
+    android:layout_gravity="center"
+    android:background="@drawable/dialogs_background"
+    android:layout_height="280dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:textColor="@color/RBColor"
+        android:text="@string/textView_Correct_Answer"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/bt_Score_Dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="OK"
+        android:textStyle="bold"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/RBColor"
+        android:textSize="35sp"
+        android:background="@drawable/dialog_bt_bg"
+        />
+</LinearLayout>
