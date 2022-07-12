@@ -7,24 +7,24 @@ import android.view.View;
 import android.widget.Button;
 
 public class CategoryActivity extends AppCompatActivity  implements View.OnClickListener {
-    Button btSport,btMusic,btScience,btMovies,btTechnology;
+    Button catSport,btMusic, catFood, catMovies, catAnimals;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
-        btSport = findViewById(R.id.bt_Sport);
-        btMusic = findViewById(R.id.bt_Music);
-        btScience = findViewById(R.id.bt_Science);
-        btMovies = findViewById(R.id.bt_Movies);
-        btTechnology = findViewById(R.id.bt_Technology);
+        catSport = findViewById(R.id.cat_Sport);
+        btMusic = findViewById(R.id.cat_Music);
+        catFood = findViewById(R.id.cat_Food);
+        catMovies = findViewById(R.id.cat_Movies);
+        catAnimals = findViewById(R.id.cat_Animals);
 
 
-        btSport.setOnClickListener(this);
+        catSport.setOnClickListener(this);
         btMusic.setOnClickListener(this);
-        btScience.setOnClickListener(this);
-        btMovies.setOnClickListener(this);
-        btTechnology.setOnClickListener(this);
+        catFood.setOnClickListener(this);
+        catMovies.setOnClickListener(this);
+        catAnimals.setOnClickListener(this);
 
 
     }
@@ -34,34 +34,34 @@ public class CategoryActivity extends AppCompatActivity  implements View.OnClick
 
         switch (view.getId()){
 
-            case R.id.bt_Sport:
+            case R.id.cat_Sport:
 
                 Intent intentSport = new Intent(CategoryActivity.this,QuizActivity.class);
-                intentSport.putExtra("Category", btSport.getText().toString());
+                intentSport.putExtra("Category", catSport.getText().toString());
                 startActivity(intentSport);
                 break;
 
-            case R.id.bt_Music:
+            case R.id.cat_Music:
                 Intent intentMusic = new Intent(CategoryActivity.this,QuizActivity.class);
                 intentMusic.putExtra("Category",btMusic.getText().toString());
                 startActivity(intentMusic);
                 break;
 
-            case R.id.bt_Science:
+            case R.id.cat_Food:
                 Intent intentScience = new Intent(CategoryActivity.this,QuizActivity.class);
-                intentScience.putExtra("Category",btScience.getText().toString());
+                intentScience.putExtra("Category", catFood.getText().toString());
                 startActivity(intentScience);
                 break;
 
-            case R.id.bt_Movies:
+            case R.id.cat_Movies:
                 Intent intentMovies = new Intent(CategoryActivity.this,QuizActivity.class);
-                intentMovies.putExtra("Category",btMovies.getText().toString());
+                intentMovies.putExtra("Category", catMovies.getText().toString());
                 startActivity(intentMovies);
                 break;
 
-            case R.id.bt_Technology:
+            case R.id.cat_Animals:
                 Intent intentTechnology = new Intent(CategoryActivity.this,QuizActivity.class);
-                intentTechnology.putExtra("Category",btTechnology.getText().toString());
+                intentTechnology.putExtra("Category", catAnimals.getText().toString());
                 startActivity(intentTechnology);
                 break;
 
