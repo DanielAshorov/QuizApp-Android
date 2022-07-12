@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">טריויה </string>
+    <string name="app_name">טריויה</string>
     <string name="language">he</string>
     <string name="get_started_text">בואו נתחיל</string>
     <string name="sub_title_opening">משחק טריוויה שמעשיר ידע</string>
@@ -32,8 +32,8 @@
     <string name = "bt_Sport">ספורט </string>
     <string name = "bt_Music">מוזיקה </string>
     <string name = "bt_Movies">סרטים </string>
-    <string name = "bt_Science">מדע </string>
-    <string name = "bt_Technology">  טכנולוגיה</string>
+    <string name = "bt_Science">אוכל </string>
+    <string name = "bt_Technology">חיות</string>
     <string name = "txtTotalQuestion">שאלות: </string>
     <string name = "txtScore">ציון: 0</string>
     <string name = "button_Next">מאשר </string>
@@ -44,7 +44,7 @@
     <string name = "result_tv_wrong_Ques">לא נכון:  </string>
     <string name = "bt_result_main_menu">תפריט ראשי:  </string>
     <string name = "txt_correct_dialog">נכון  </string>
-    <string name = "textView_Score">ניקוד :  </string>
+    <string name = "textView_Score">ניקוד:  </string>
     <string name = "txt_correct_dialog_ok"> אוקי  </string>
     <string name = "txt_wrong_dialog"> טעות  </string>
     <string name = "textView_Correct_Answer">תוצאה סופית:  </string>

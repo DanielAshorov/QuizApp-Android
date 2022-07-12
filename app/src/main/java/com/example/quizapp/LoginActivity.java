@@ -98,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                                         data[0] = documentSnapshot.toObject(UserDetails.class);
 
                                         progressDialog.cancel();
-                                        Intent main = new Intent(LoginActivity.this, CategoryActivity.class);
+                                        Intent main = new Intent(LoginActivity.this,  CategoryActivity.class);
                                         main.putExtra("userDetails", data[0]);
                                         startActivity(main);
                                     }
