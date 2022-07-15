@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/result_back1"
+    android:background="#1A4A46"
     android:gravity="center"
     tools:context=".ResultActivity">
 
@@ -17,7 +17,7 @@
         android:padding="10dp"
         android:text="@string/txt_result_title"
         android:textAlignment="center"
-        android:textColor="@color/dialogColor"
+        android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold" />
 
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/result_bg"
+        android:background="#1A5A54"
         android:orientation="vertical"
         android:paddingStart="30dp"
         android:paddingEnd="30dp">
@@ -37,10 +37,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:gravity="start"
-            android:padding="10dp"
             android:text="@string/result_tv_HighScore"
             android:textAlignment="textStart"
-            android:textColor="#000"
+            android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -49,11 +48,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start"
-            android:padding="10dp"
             android:text="@string/result_tv_Num_of_Ques"
             android:textAlignment="textStart"
-            android:textColor="#000"
+            android:textColor="@color/white"
             android:textSize="30sp"
+            android:layout_marginTop="20dp"
             android:textStyle="bold" />
 
         <TextView
@@ -61,10 +60,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start"
-            android:padding="10dp"
             android:text="@string/result_tv_correct_Ques"
+            android:layout_marginTop="20dp"
             android:textAlignment="textStart"
-            android:textColor="#000"
+            android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -73,10 +72,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start"
-            android:padding="10dp"
+            android:layout_marginTop="20dp"
             android:text="@string/result_tv_wrong_Ques"
             android:textAlignment="textStart"
-            android:textColor="#000"
+            android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -89,10 +88,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="20sp"
             android:layout_weight="1"
-            android:background="@color/bg_background"
+            android:background="#1A4A46"
             android:text="@string/bt_result_main_menu"
             android:textAllCaps="false"
-            android:textColor="@color/dialogColor"
+            android:textColor="@color/white"
             android:textSize="30sp" />
 
     </LinearLayout>
