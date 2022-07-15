@@ -56,44 +56,51 @@ abstract class QuestionRoomDatabase extends RoomDatabase {
         @Override
         protected Void doInBackground(Void... voids) {
             Log.d("TRIVIA", "doInBackground: start insert");
-            questionDao.insert(new Questions("Arsenal have won the only championship without a league loss", "True", "False", "Germany", "France", 3,"Sport", "en"));
-            questionDao.insert(new Questions("How many Grand Slam titles Rafael Nadal have?","20", "25", "18","15", 1,"Sport", "en"));
+            questionDao.insert(new Questions("Arsenal have won the only championship without a league loss", "True", "False", "Two Teams Hold This Record", "Everton Holds The Record", 1,"Sport", "en"));
+            questionDao.insert(new Questions("Chelsea holds the lowest absorption record in the Premier League?","True", "False", "No,Man.United did","No,Arsenal did", 1,"Sport", "en"));
             questionDao.insert(new Questions("The Olympics are held every how many years?","5", "2", "4","8", 3,"Sport", "en"));
-            questionDao.insert(new Questions("Tiger Woods is a","Swimmer", "Basketball coach", "Tennis player","Golf player", 4,"Sport", "en"));
-            questionDao.insert(new Questions("The last teem Michael Jordan played for was","LA Lakers", "Washington Wizards", "Chicago bulls","NY Knicks",  2,"Sport", "en"));
-            questionDao.insert(new Questions("Cristiano Ronaldo plays for","Portugal", "Spain", "Argentina","Chile", 1,"Sport", "en"));
-            questionDao.insert(new Questions("The NFL is the top league for","Basketball", "Soccer", "Hockey","Football", 4,"Sport", "en"));
+            questionDao.insert(new Questions("Real Madrid record holders of Champions League wins","True", "False", "Milan Holds The Record","Man.United Holds The Record", 1,"Sport", "en"));
+            questionDao.insert(new Questions("Yossi Benayoun scored a goal against Real Madrid","Scored vs Barcelona", "False", "He didnt scord in the CL","True",  4,"Sport", "en"));
+            questionDao.insert(new Questions("Cristiano Ronaldo plays for","Portugal", "Spain", "Argentina","Israel", 1,"Sport", "en"));
+            questionDao.insert(new Questions("The record holder of titles in tennis is Novak Djokovic","True", "No, Andy Murray holds the record", "No, Federrer holds the record","False", 4,"Sport", "en"));
             questionDao.insert(new Questions("Which of the following won the Champions League","Neymar", "Paul Pogba", "Antoine Griezmann","Eden Hazard ", 1,"Sport", "en"));
             questionDao.insert(new Questions("Which of the following clubs is not from London","Tottenham", "Chelsea", "Everton","Arsenal", 3,"Sport", "en"));
-            questionDao.insert(new Questions("Who is the top scorer in the history of the EuroLeague","Juan Carlos Navarro", "Spanoulis", "Anthony Parker","Diamantidis", 2,"Sport", "en"));
+            questionDao.insert(new Questions("Andy Murray won Wimbledon in 2016","No. Won in 2013", "True", "No. Won in 2015.","No. Won in 2014.", 2,"Sport", "en"));
+             questionDao.insert(new Questions("Maccabi Tel Aviv basketball team has won the European Cup 5 times", "True", "Won 6 Times", "Won 2 Times", "Won 7 Times", 2,"Sport", "en"));
+            questionDao.insert(new Questions("Omri Caspi is the first Israeli to play in NBA","True", "Guy Pnini ", "No one of the Israeli players played in the NBA","Danni Avadya", 1,"Sport", "en"));
+            questionDao.insert(new Questions("The highest point difference in a basketball game in NBA is 73 points","True", "72 points", "54 Points","88 Points", 1,"Sport", "en"));
+            questionDao.insert(new Questions("The record for most threes in NBA belongs to Klay Thompson","True", "Omri Caspi", "Carim Abdul Jabbar","Lebron James", 1,"Sport", "en"));
+            questionDao.insert(new Questions("Chelsea have won the Champions League 4 times","True", "3", "1","2",  4,"Sport", "en"));
 
-            questionDao.insert(new Questions("מי זכה במונדיאל ב-2014?", "ארגנטינה", "ברזיל", "גרמניה", "צרפת", 3,"ספורט", "he"));
-            questionDao.insert(new Questions("בכמה תארי גרנד סלאם זכה רפאל נדאל","20", "25", "18","15", 1,"ספורט", "he"));
+
+
+
+            questionDao.insert(new Questions("ארסנל זכו באליפות היחידה ללא הפסד ליגה", "לא נכון", "נכון", "שתי קבוצות מחזיקות בשיא יחד", "אברטון מחזיקה בשיא", 2,"ספורט", "he"));
+            questionDao.insert(new Questions("צ'לסי מחזיקה בשיא הספיגות הנמוך ביותר בפריימרליג","נכון", "לא נכון", "מנצ'סטר יונייטד מחזיקה בשיא","ארסנל מחזיקה בשיא", 1,"ספורט", "he"));
             questionDao.insert(new Questions("בכל כמה שנים מתקיימת האולימפיאדה?","5", "2", "4","8", 3,"ספורט", "he"));
-            questionDao.insert(new Questions("טייגר וודס הוא","שחיין	", "מאמן כדורסל", "שחקן טניס","שחקן גולף", 4,"ספורט", "he"));
-            questionDao.insert(new Questions("מי היא הקבוצה האחרונה בה שיחק מייקל ג'ורדן","ל.א לייקרס", "וושינגטון ויזארדס", "שיקגו בולס","ניו יורק ניקס",  2,"ספורט", "he"));
-            questionDao.insert(new Questions("כריסטיאנו רונאלדו משחק עבור","פורטוגל", "ספרד", "ארגנטינה","צ'ילה", 1,"ספורט", "he"));
-            questionDao.insert(new Questions("באיזה תחום משוחקת ליגת ה-NFL","כדורסל", "fsurdk", "הוקי","כדורגל", 4,"ספורט", "he"));
+            questionDao.insert(new Questions("ריאל מדריד שיאנית זכיות ליגת האלופות","לא נכון", "נכון", "מנצסטר יונייטד מחזיקה בשיא","מילאן מחזיקה בשיא", 2,"ספורט", "he"));
+            questionDao.insert(new Questions("יוסי בניון כבש שער נגד ריאל מדריד","כבש נגד ברצלונה", "לא נכון", "לא כבש בליגת האלופות","נכון",  4,"ספורט", "he"));
+            questionDao.insert(new Questions("כריסטיאנו רונאלדו משחק עבור","פורטוגל", "ספרד", "ארגנטינה","ישראל", 1,"ספורט", "he"));
+            questionDao.insert(new Questions("ג'וקוביץ' מחזיק בכמות התארים הגדולה ביותר של טניסאי בהיסטוריה","נכון", "אנדי מארי מחזיק בשיא זה", "פדרר מחזיק בשיא זה","לא נכון", 4,"ספורט", "he"));
             questionDao.insert(new Questions("מי מהבאים זכה בליגת האלופות","ניימאר", "פול פוגבה", "אנטואן גריזמן","עדן הזארד ", 1,"ספורט", "he"));
             questionDao.insert(new Questions("מי מהמועדנים הבאים אינו מלונדון","טוטנהאם", "צ'לסי", "אברטון","ארסנל", 3,"ספורט", "he"));
-            questionDao.insert(new Questions("מי הוא מלך הסלים בתולדות היורוליג","חואן קרלוס נבארו", "וסיליס ספנוליס", "אנטוני פארקר","דיאמנטידיס", 2,"ספורט", "he"));
+            questionDao.insert(new Questions("אנדי מארי זכה בווימבלדון בשנת 2016","זכה ב2013", "נכון", "זכה ב2015","זכב ב2014", 2,"ספורט", "he"));
+            questionDao.insert(new Questions("מכבי תל אביב בכדורסל זכו 5 פעמים בגביע אירופה", "נכון", "זכו פעמיים", "זכו 6 פעמים", "זכו 7 פעמים", 3,"ספורט", "he"));
+            questionDao.insert(new Questions("עמרי כספי הוא הכדורסלן הישראלי הראשון ב נ.ב.א","נכון", "גיא פניני הוא הראשון", "דני אבדיה","מעולם לא שיחק ישראלי ב NBA", 1,"ספורט", "he"));
+            questionDao.insert(new Questions("הפרש הנקודות הכי גדול איי פעם במשחק כדורגל ב נ.ב.א עומד על 73 נקודות","88 נקודות", "נכון", "72 נקודות","54 נקודות", 2,"ספורט", "he"));
+            questionDao.insert(new Questions("קלי טומפסון מחזיק בשיא שלשות בהיסטוריה ב נ.ב.א","נכון", "עמרי כספי", "קארים עבדול ג'אבר","לברון ג'יימס", 1,"ספורט", "he"));
+            questionDao.insert(new Questions("צ'לסי זכו בליגת האלופות 4 פעמים","3", "נכון", "1","2",  4,"ספורט", "he"));
 
 
 
             questionDao.insert(new Questions("In which year did Justin Bieber release Baby","2012", "2009", "2006","2007", 2,"Music", "en"));
             questionDao.insert(new Questions("Who sang in James Bond movie (Skyfall)","Adele", "Rihanna", "Tina Turner","Madonna", 1,"Music", "en"));
             questionDao.insert(new Questions("What is the real name of Elton john","Paul David Hewson", "Robyn Fenty", "Stevland Hardaway Judkins","Reginald Dwight", 4,"Music", "en"));
-            questionDao.insert(new Questions("Robert Plant was the lead singer of which rock band","Green Day", "The Rembrandts", "Led Zeppelin","Guro", 3,"Music", "en"));
-            questionDao.insert(new Questions("Who was the youngest beatle","Paul McCarthney", "Ringo Starr", "George Harrison","John Lennon", 3,"Music", "en"));
-            questionDao.insert(new Questions("Celine Dion won the Eurovision for","France", "Swiss", "Spain","Israel", 2,"Music", "en"));
 
 
             questionDao.insert(new Questions("באיזו שנה יצאו לאור שירו של ג'סטין ביבר בייבי?","2012", "2009", "2006","2007", 2,"מוזיקה", "he"));
             questionDao.insert(new Questions("מי שר את שיר הפתיחה בסרט סקייפול של ג'יימס בונד","אדל", "ריהאנה", "טינה טרנר","מדונה", 1,"מוזיקה", "he"));
             questionDao.insert(new Questions("מה הוא שמו האמיתי של אלטון ג'ון","פ'ול דיוויד", "רובין פנטי", "סטיב הארדווי ג'נקינס","רדינאלד דוויט", 4,"מוזיקה", "he"));
-            questionDao.insert(new Questions("באיזו להקת רוק כיכב דיוויד פלאנט","גרין דיי", "הבלתי מאושרים", "לד זפלין","גורו", 3,"מוזיקה", "he"));
-            questionDao.insert(new Questions("מי היה הזמר הצעיר ביותר בביטלס","פ'ול מקרטני", "רינגו סטאר", "ג'ורג' האריסון","ג'ון לנון", 3,"מוזיקה", "he"));
-            questionDao.insert(new Questions("את מי ייצגה סלין דיון באירויוזיון","צרפת", "שוויץ", "ספרד","ישראל", 2,"מוזיקה", "he"));
 
 
             questionDao.insert(new Questions("What planet is closest to the sun","Mercury", "Neptune", "Jupiter","Venus", 1,"Science", "en"));
