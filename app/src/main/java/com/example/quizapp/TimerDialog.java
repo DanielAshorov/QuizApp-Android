@@ -30,7 +30,7 @@ public class TimerDialog {
             public void onClick(View v) {
 
                 timerDialog.dismiss();
-                Intent intent = new Intent(mContext, PlayActivity.class);
+                Intent intent = new Intent(mContext, CategoryActivity.class);
                 mContext.startActivity(intent);
 
             }
