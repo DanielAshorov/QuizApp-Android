@@ -16,7 +16,6 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity android:name=".CategoryActivity" />
-        <activity android:name=".PlayActivity" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".ResultActivity" />
         <activity

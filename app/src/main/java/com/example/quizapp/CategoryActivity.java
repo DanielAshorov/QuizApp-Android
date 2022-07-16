@@ -7,26 +7,23 @@ import android.view.View;
 import android.widget.Button;
 
 public class CategoryActivity extends AppCompatActivity  implements View.OnClickListener {
-    Button catSport,btMusic, catFood, catMovies, catAnimals;
+    Button catSport, catMusic, catFood, catMovies, catAnimals;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
         catSport = findViewById(R.id.cat_Sport);
-        btMusic = findViewById(R.id.cat_Music);
+        catMusic = findViewById(R.id.cat_Music);
         catFood = findViewById(R.id.cat_Food);
         catMovies = findViewById(R.id.cat_Movies);
         catAnimals = findViewById(R.id.cat_Animals);
 
-
         catSport.setOnClickListener(this);
-        btMusic.setOnClickListener(this);
+        catMusic.setOnClickListener(this);
         catFood.setOnClickListener(this);
         catMovies.setOnClickListener(this);
         catAnimals.setOnClickListener(this);
-
-
     }
 
     @Override
@@ -43,7 +40,7 @@ public class CategoryActivity extends AppCompatActivity  implements View.OnClick
 
             case R.id.cat_Music:
                 Intent intentMusic = new Intent(CategoryActivity.this,QuizActivity.class);
-                intentMusic.putExtra("Category",btMusic.getText().toString());
+                intentMusic.putExtra("Category", catMusic.getText().toString());
                 startActivity(intentMusic);
                 break;
 
