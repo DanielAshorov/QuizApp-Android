@@ -123,10 +123,10 @@ public class QuizActivity extends AppCompatActivity {
         rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_b));
         rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_c));
         rb4.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_d));
-        rb1.setTextColor(Color.BLACK);
-        rb2.setTextColor(Color.BLACK);
-        rb3.setTextColor(Color.BLACK);
-        rb4.setTextColor(Color.BLACK);
+        rb1.setTextColor(Color.WHITE);
+        rb2.setTextColor(Color.WHITE);
+        rb3.setTextColor(Color.WHITE);
+        rb4.setTextColor(Color.WHITE);
         questionTotalCount = quesList.size() + 1;
 
         if (questionCounter < questionTotalCount -1){
@@ -451,7 +451,7 @@ public class QuizActivity extends AppCompatActivity {
     public void onBackPressed() {
 
         if (backPressedTime + 2000 > System.currentTimeMillis()){
-            Intent intent = new Intent(QuizActivity.this, PlayActivity.class);
+            Intent intent = new Intent(QuizActivity.this, CategoryActivity.class);
             startActivity(intent);
 
         }else {
