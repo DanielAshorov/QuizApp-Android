@@ -434,15 +434,14 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-
     private void resultData(){
         finish(); // close activity
-        Intent resultofQuiz = new Intent(QuizActivity.this,ResultActivity.class);
-        resultofQuiz.putExtra("UserScore", score);
-        resultofQuiz.putExtra("TotalQuizQuestions",(questionTotalCount -1));
-        resultofQuiz.putExtra("CorrectQuestions",correctAns);
-        resultofQuiz.putExtra("WrongQuestions",wrongAns);
-        startActivity(resultofQuiz);
+        Intent QuizResult = new Intent(QuizActivity.this,ResultActivity.class);
+        QuizResult.putExtra("UserScore", score);
+        QuizResult.putExtra("TotalQuizQuestions",(questionTotalCount -1));
+        QuizResult.putExtra("CorrectQuestions",correctAns);
+        QuizResult.putExtra("WrongQuestions",wrongAns);
+        startActivity(QuizResult);
 
     }
 

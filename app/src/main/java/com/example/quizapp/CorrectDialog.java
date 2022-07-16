@@ -28,7 +28,7 @@ public class CorrectDialog {
         correctDialog.setContentView(R.layout.correct_dialog);
         final Button btcorrectDialog = (Button) correctDialog.findViewById(R.id.bt_Score_Dialog);
 
-        Score(score);  //  calling method
+        Score(score);
 
         btcorrectDialog.setOnClickListener(new View.OnClickListener() {
             @Override
