@@ -125,13 +125,39 @@ abstract class QuestionRoomDatabase extends RoomDatabase {
             questionDao.insert(new Questions("טיילור סוויפט השיקה שני אלבומים בשנת 2020","5", "3", "נכון","1", 3,"מוזיקה", "he"));
 
 
-            questionDao.insert(new Questions("What planet is closest to the sun","Mercury", "Neptune", "Jupiter","Venus", 1,"Science", "en"));
-            questionDao.insert(new Questions("What is the largest planet","Mercury", "Neptune", "Jupiter","Venus", 3,"Science", "en"));
-            questionDao.insert(new Questions("How many continents are there in the world","7", "4", "5","9", 1,"Science", "en"));
+            questionDao.insert(new Questions("The spider has ___ legs","8", "5", "6","7", 1,"Animals", "en"));
+            questionDao.insert(new Questions("The tallest animal in the world is","Giraffe", "Mouse", "Cat","Fish", 1,"Animals", "en"));
+            questionDao.insert(new Questions("The animal that barks is ___","Cat", "Dog", "Ant","Monkey", 2,"Animals", "en"));
+            questionDao.insert(new Questions("The mammal that can fly is ___","Horse", "Bat", "Cat","Dog", 2,"Animals", "en"));
+            questionDao.insert(new Questions("The fastest animal in the world is ___","Cheetah", "Dog", "Bat","Spider", 1,"Animals", "en"));
+            questionDao.insert(new Questions("What is the type of the animal Kangaroos","Home Cat", "Trees Monkey", "Marsupial","Wild Bear", 3,"Animals", "en"));
+            questionDao.insert(new Questions("An elephant's pregnancy takes about ___  years","1", "4", "3","2", 4,"Animals", "en"));
+            questionDao.insert(new Questions("The insect that can carry 50 times its body weight is an ___","Bee", "Ant", "Bird","Chicken", 2,"Animals", "en"));
+            questionDao.insert(new Questions("The octopus has ___ hearts","2", "1", "4","3", 4,"Animals", "en"));
+            questionDao.insert(new Questions("Lobster has ___ legs","2", "12", "10","3", 3,"Animals", "en"));
+            questionDao.insert(new Questions("The snake sticks its tongue out to ___","eat", "smell", "kill","see", 2,"Animals", "en"));
+            questionDao.insert(new Questions("___ is a kind of monkey","Spider", "Tiger", "Baboon","Mouse", 3,"Animals", "en"));
+            questionDao.insert(new Questions("The shark has ___ bones","100", "0", "3","84", 2,"Animals", "en"));
+            questionDao.insert(new Questions("Kukuriku is the ___ voice","Rooster", "Fox", "Tiger","Elephant", 1,"Animals", "en"));
+            questionDao.insert(new Questions("The color of the giraffe's tongue is ___","Red", "Yellow", "Blue","Purple", 4,"Animals", "en"));
+            questionDao.insert(new Questions("It is customary to say that a cat has ___ souls","8", "1", "4","9", 4,"Animals", "en"));
 
-            questionDao.insert(new Questions("מי הוא כוכב הלכת הקרוב ביותר לשמש","מרקורי", "נפטון", "יופיטר","ונוס", 1,"מדע", "he"));
-            questionDao.insert(new Questions("מה הוא כוכב הלכת הגדול ביותר","מרקורי", "נפטון", "יופיטר","ונוס", 3,"מדע", "he"));
-            questionDao.insert(new Questions("כמה יבשות יש בעולם","7", "4", "5","9", 1,"Science", "מדע"));
+
+            questionDao.insert(new Questions("איזו סוג חיה היא קנגרו?","בייתית", "עצית", "כיס","בר", 3,"חיות", "he"));
+            questionDao.insert(new Questions("לעכביש יש ___ רגליים","8", "5", "7","6", 1,"חיות", "he"));
+            questionDao.insert(new Questions("החיה הגבוהה בעולם היא ___","ג'ירפה", "עכבר", "חתול","דג", 1,"חיות", "he"));
+            questionDao.insert(new Questions("החיה שנובחת היא ___","חתול", "כלב", "נמלה","קוף", 2,"חיות", "he"));
+            questionDao.insert(new Questions("היונק שמסוגל לעוף הוא ___","סוס", "עטלף", "חתול","כלב", 2,"חיות", "he"));
+            questionDao.insert(new Questions("החיה המהירה בעולם היא ___","צ'יטה", "כלב", "עטלף","עכביש", 1,"חיות", "he"));
+            questionDao.insert(new Questions("הריון של פיל נמשך כ___ שנים","1", "2", "3","4", 2,"חיות", "he"));
+            questionDao.insert(new Questions("לתמנון יש ___ לבבות","1", "4", "3","2", 3,"חיות", "he"));
+            questionDao.insert(new Questions("ללובסטר יש ___ רגליים","2", "12", "10","3", 3,"חיות", "he"));
+            questionDao.insert(new Questions("הנחש מוציא את לשונו כדי ___","לאכול", "להריח", "להרוג","לראות", 2,"חיות", "he"));
+            questionDao.insert(new Questions("___ הוא סוג של קוף","נמר", "בבון", "עכבר","עכביש", 2,"חיות", "he"));
+            questionDao.insert(new Questions("לכריש יש ___ עצמות","100", "0", "3","84", 2,"חיות", "he"));
+            questionDao.insert(new Questions("קוקוריקו הוא הצליל שמשמיע ___","תרנגול", "שועל", "נמר","פיל", 1,"חיות", "he"));
+            questionDao.insert(new Questions("צבע הלשון של ג'ירפה הוא ___","אדום", "צהוב", "כחול","סגול", 4,"חיות", "he"));
+            questionDao.insert(new Questions("נהוג לומר שיש לחתול ___ נשמות","8", "1", "4","9", 4,"חיות", "he"));
 
 
             questionDao.insert(new Questions("Who is 007","Superman", "James Bond", "Ben Afflek","Richard Harrison", 2,"Movies", "en"));
