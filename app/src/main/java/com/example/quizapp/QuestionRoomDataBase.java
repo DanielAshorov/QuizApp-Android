@@ -56,6 +56,136 @@ abstract class QuestionRoomDatabase extends RoomDatabase {
         @Override
         protected Void doInBackground(Void... voids) {
 
+            Log.d("TRIVIA", "doInBackground: start insert");
+            questionDao.insert(new Questions("Arsenal have won the only championship without a league loss", "True", "False", "Two Teams Hold This Record", "Everton Holds The Record", 1,"Sport", "en"));
+            questionDao.insert(new Questions("Chelsea holds the lowest absorption record in the Premier League?","True", "False", "No,Man.United did","No,Arsenal did", 1,"Sport", "en"));
+            questionDao.insert(new Questions("The Olympics are held every how many years?","5", "2", "4","8", 3,"Sport", "en"));
+            questionDao.insert(new Questions("Real Madrid record holders of Champions League wins","True", "False", "Milan Holds The Record","Man.United Holds The Record", 1,"Sport", "en"));
+            questionDao.insert(new Questions("Yossi Benayoun scored a goal against Real Madrid","Scored vs Barcelona", "False", "He didnt scord in the CL","True",  4,"Sport", "en"));
+            questionDao.insert(new Questions("Cristiano Ronaldo plays for","Portugal", "Spain", "Argentina","Israel", 1,"Sport", "en"));
+            questionDao.insert(new Questions("The record holder of titles in tennis is Novak Djokovic","True", "No, Andy Murray holds the record", "No, Federrer holds the record","False", 4,"Sport", "en"));
+            questionDao.insert(new Questions("Which of the following won the Champions League","Neymar", "Paul Pogba", "Antoine Griezmann","Eden Hazard ", 1,"Sport", "en"));
+            questionDao.insert(new Questions("Which of the following clubs is not from London","Tottenham", "Chelsea", "Everton","Arsenal", 3,"Sport", "en"));
+            questionDao.insert(new Questions("Andy Murray won Wimbledon in 2016","No. Won in 2013", "True", "No. Won in 2015.","No. Won in 2014.", 2,"Sport", "en"));
+            questionDao.insert(new Questions("Maccabi Tel Aviv basketball team has won the European Cup 5 times", "True", "Won 6 Times", "Won 2 Times", "Won 7 Times", 2,"Sport", "en"));
+            questionDao.insert(new Questions("Omri Caspi is the first Israeli to play in NBA","True", "Guy Pnini ", "No one of the Israeli players played in the NBA","Danni Avadya", 1,"Sport", "en"));
+            questionDao.insert(new Questions("The highest point difference in a basketball game in NBA is 73 points","True", "72 points", "54 Points","88 Points", 1,"Sport", "en"));
+            questionDao.insert(new Questions("The record for most threes in NBA belongs to Klay Thompson","True", "Omri Caspi", "Carim Abdul Jabbar","Lebron James", 1,"Sport", "en"));
+            questionDao.insert(new Questions("Chelsea have won the Champions League 4 times","True", "3", "1","2",  4,"Sport", "en"));
+
+
+            questionDao.insert(new Questions("ארסנל זכו באליפות היחידה ללא הפסד ליגה", "לא נכון", "נכון", "שתי קבוצות מחזיקות בשיא יחד", "אברטון מחזיקה בשיא", 2,"ספורט", "he"));
+            questionDao.insert(new Questions("צ'לסי מחזיקה בשיא הספיגות הנמוך ביותר בפריימרליג","נכון", "לא נכון", "מנצ'סטר יונייטד מחזיקה בשיא","ארסנל מחזיקה בשיא", 1,"ספורט", "he"));
+            questionDao.insert(new Questions("בכל כמה שנים מתקיימת האולימפיאדה?","5", "2", "4","8", 3,"ספורט", "he"));
+            questionDao.insert(new Questions("ריאל מדריד שיאנית זכיות ליגת האלופות","לא נכון", "נכון", "מנצסטר יונייטד מחזיקה בשיא","מילאן מחזיקה בשיא", 2,"ספורט", "he"));
+            questionDao.insert(new Questions("יוסי בניון כבש שער נגד ריאל מדריד","כבש נגד ברצלונה", "לא נכון", "לא כבש בליגת האלופות","נכון",  4,"ספורט", "he"));
+            questionDao.insert(new Questions("כריסטיאנו רונאלדו משחק עבור","פורטוגל", "ספרד", "ארגנטינה","ישראל", 1,"ספורט", "he"));
+            questionDao.insert(new Questions("ג'וקוביץ' מחזיק בכמות התארים הגדולה ביותר של טניסאי בהיסטוריה","נכון", "אנדי מארי מחזיק בשיא זה", "פדרר מחזיק בשיא זה","לא נכון", 4,"ספורט", "he"));
+            questionDao.insert(new Questions("מי מהבאים זכה בליגת האלופות","ניימאר", "פול פוגבה", "אנטואן גריזמן","עדן הזארד ", 1,"ספורט", "he"));
+            questionDao.insert(new Questions("מי מהמועדנים הבאים אינו מלונדון","טוטנהאם", "צ'לסי", "אברטון","ארסנל", 3,"ספורט", "he"));
+            questionDao.insert(new Questions("אנדי מארי זכה בווימבלדון בשנת 2016","זכה ב2013", "נכון", "זכה ב2015","זכב ב2014", 2,"ספורט", "he"));
+            questionDao.insert(new Questions("מכבי תל אביב בכדורסל זכו 5 פעמים בגביע אירופה", "נכון", "זכו פעמיים", "זכו 6 פעמים", "זכו 7 פעמים", 3,"ספורט", "he"));
+            questionDao.insert(new Questions("עמרי כספי הוא הכדורסלן הישראלי הראשון ב נ.ב.א","נכון", "גיא פניני הוא הראשון", "דני אבדיה","מעולם לא שיחק ישראלי ב NBA", 1,"ספורט", "he"));
+            questionDao.insert(new Questions("הפרש הנקודות הכי גדול איי פעם במשחק כדורגל ב נ.ב.א עומד על 73 נקודות","88 נקודות", "נכון", "72 נקודות","54 נקודות", 2,"ספורט", "he"));
+            questionDao.insert(new Questions("קלי טומפסון מחזיק בשיא שלשות בהיסטוריה ב נ.ב.א","נכון", "עמרי כספי", "קארים עבדול ג'אבר","לברון ג'יימס", 1,"ספורט", "he"));
+            questionDao.insert(new Questions("צ'לסי זכו בליגת האלופות 4 פעמים","3", "נכון", "1","2",  4,"ספורט", "he"));
+
+
+            questionDao.insert(new Questions("In which year did Justin Bieber release Baby","2012", "2009", "2006","2007", 2,"Music", "en"));
+            questionDao.insert(new Questions("Who sang in James Bond movie (Skyfall)","Adele", "Rihanna", "Tina Turner","Madonna", 1,"Music", "en"));
+            questionDao.insert(new Questions("What is the real name of Elton john","Paul David Hewson", "Robyn Fenty", "Stevland Hardaway Judkins","Reginald Dwight", 4,"Music", "en"));
+            questionDao.insert(new Questions("Israel won the Eurovision Song Contest for the first time in 1958","False", "In 1966", "In 1959","In 1988", 1,"Music", "en"));
+            questionDao.insert(new Questions("Lior Narkis represented Israel at the Eurovision Song Contest?","No, Yehuda Levy represent", "True", "No, Haim Ifergan represent","No, Reuven the angel represent", 2,"Music", "en"));
+            questionDao.insert(new Questions("What is the real name of Reuven the Angel?","Reuven levy is the real name", "Reuven Alfasi is the real name", "Reuven Shimoni is the real name","Reuven Cohen is the real name", 3,"Music", "en"));
+            questionDao.insert(new Questions("Eyal Golan's first song was released in 1973","In 1999", "True", "In 1990","In 1993", 4,"Music", "en"));
+            questionDao.insert(new Questions("Arik Einstein's guitar and violin song written by Shalom Hanoch","Written by Arik Einstien", "True", "Written by Shem-tov levy","Written by Yehunathan geffen", 2,"Music", "en"));
+            questionDao.insert(new Questions("Yitzhak Klepter was in the Kaveret band ","Was in Machina band", "True", "Was in High Five band","Was in High windows band", 2,"Music", "en"));
+            questionDao.insert(new Questions("Maty Caspi composed the music of a celebration in snooker","True", "Lior Narkis", "Moshe Peretz","Sholomo Artzi", 1,"Music", "en"));
+            questionDao.insert(new Questions("Aviv Geffen's first album was \"It's just the moonlight\"","True", "You and Me", "Lost Years","Beni Was here", 1,"Music", "en"));
+            questionDao.insert(new Questions("Linkin Park Band was founded in ___","1989", "1996", "1992","1990", 2,"Music", "en"));
+            questionDao.insert(new Questions("The song \"Gang Ham Style\" published by a South Korean singer","North Korean", "Island", "French","True", 1,"Music", "en"));
+            questionDao.insert(new Questions("Noa Kirel lives in Petah Tikva","True", "Tel Aviv", "Kfar Sava","Raanana", 4,"Music", "en"));
+            questionDao.insert(new Questions("Taylor Swift launched ___ albums in 2020","5", "3", "2","1", 3,"Music", "en"));
+
+
+            questionDao.insert(new Questions("מה הוא שמו האמיתי של אלטון ג'ון","פ'ול דיוויד", "רובין פנטי", "סטיב הארדווי ג'נקינס","רדינאלד דוויט", 4,"מוזיקה", "he"));
+            questionDao.insert(new Questions("ישראל זכתה בארוויזיון בפעם הראשונה ב1958","לא נכון", "1966", "1959","1988", 1,"מוזיקה", "he"));
+            questionDao.insert(new Questions("ליאור נרקיס ייצג את ישראל בארוויזיון?","לא, חיים איפרגן ייצג", "נכון", "לא, יהודה לוי ייצג","לא, ראובן המלאך ייצג", 2,"מוזיקה", "he"));
+            questionDao.insert(new Questions("באיזו שנה יצאו לאור שירו של ג'סטין ביבר בייבי?","2012", "2009", "2006","2007", 2,"מוזיקה", "he"));
+            questionDao.insert(new Questions("מה השם האמיתי של ראובן המלאך?","ראובן לוי", "ראובן אלפסי", "ראובן שמעוני","ראובן כהן", 3,"מוזיקה", "he"));
+            questionDao.insert(new Questions("השיר הראשון של אייל גולן יצא בשנת 1973","יצא בשנת 1973", "יצא בשנת 1999", "נכון","יצא בשנת 1993", 4,"מוזיקה", "he"));
+            questionDao.insert(new Questions("השיר גיטרה וכינור של אריק איינשטיין נכתב על ידי שלום חנוך","אריק איינשטיין כתב", "נכון", "שם טוב לוי כתב","יהונתן גפן כתב", 2,"מוזיקה", "he"));
+            questionDao.insert(new Questions("יצחק קלפטר היה בלהקת כוורת ","בלהקת משינה", "נכון", "בלהקת היי פייב","בלהקת החלונות הגבוהים", 2,"מוזיקה", "he"));
+            questionDao.insert(new Questions("מתי כספי הלחין את המוזיקה של חגיגה בסנוקר","נכון", "ליאור נרקיס", "משה פרץ","שלמה ארצי", 1,"מוזיקה", "he"));
+            questionDao.insert(new Questions("מי שר את שיר הפתיחה בסרט סקייפול של ג'יימס בונד","אדל", "ריהאנה", "טינה טרנר","מדונה", 1,"מוזיקה", "he"));
+            questionDao.insert(new Questions("האלבום הראשון של אביב גפן היה \"זה רק אור הירח\" ","נכון", "את ואני", "שנים אבודות","בני היה פה", 1,"מוזיקה", "he"));
+            questionDao.insert(new Questions("הלהקה לינקין פארק נוסדה בשנת 1996","1989", "נכון", "1992","1990", 2,"מוזיקה", "he"));
+            questionDao.insert(new Questions("השיר \"גאנג האם סטייל\" שוחרר על ידי זמר דרום קוריאני","נכון", "צפון קוריאני", "איסלנדי","צרפתי", 1,"מוזיקה", "he"));
+            questionDao.insert(new Questions("נועה קירל גרה בפתח תקווה","בנתניה", "נכון", "בתל אביב","ברעננה", 4,"מוזיקה", "he"));
+            questionDao.insert(new Questions("טיילור סוויפט השיקה שני אלבומים בשנת 2020","5", "3", "נכון","1", 3,"מוזיקה", "he"));
+
+
+            questionDao.insert(new Questions("What planet is closest to the sun","Mercury", "Neptune", "Jupiter","Venus", 1,"Science", "en"));
+            questionDao.insert(new Questions("What is the largest planet","Mercury", "Neptune", "Jupiter","Venus", 3,"Science", "en"));
+            questionDao.insert(new Questions("How many continents are there in the world","7", "4", "5","9", 1,"Science", "en"));
+
+            questionDao.insert(new Questions("מי הוא כוכב הלכת הקרוב ביותר לשמש","מרקורי", "נפטון", "יופיטר","ונוס", 1,"מדע", "he"));
+            questionDao.insert(new Questions("מה הוא כוכב הלכת הגדול ביותר","מרקורי", "נפטון", "יופיטר","ונוס", 3,"מדע", "he"));
+            questionDao.insert(new Questions("כמה יבשות יש בעולם","7", "4", "5","9", 1,"Science", "מדע"));
+
+
+            questionDao.insert(new Questions("Who is 007","Superman", "James Bond", "Ben Afflek","Richard Harrison", 2,"Movies", "en"));
+            questionDao.insert(new Questions("Who is part of the Avengers","Batman", "Doom", "Wolverine","Hulk", 4,"Movies", "en"));
+            questionDao.insert(new Questions("Who directed \"Kill Bill\"","Tarantino", "Spielberg", "Scorsese Martin","Christopher Nolan", 1,"Movies", "en"));
+            questionDao.insert(new Questions("Who directed \"Inception\"","Tarantino", "Spielberg", "Scorsese Martin","Christopher Nolan", 4,"Movies", "en"));
+            questionDao.insert(new Questions("Who played \"The Gladiator\"","Gerard Butler", "Tom Cruz", "Russell Crowe","Brad Pitt", 2,"Movies", "en"));
+            questionDao.insert(new Questions("25.\tWho played \"The Mask\"","Jim Carrey", "Sasha Baron Cohen", "Adam Sandler","Brad Pitt", 1,"Movies", "en"));
+
+
+            questionDao.insert(new Questions("מי הוא 007","סופרמן", "ג'יימס בונד", "בן אפלק","ריצ'רד באריסון", 2,"סרטים", "he"));
+            questionDao.insert(new Questions("מי הוא חלק מהנוקמים","באטמן", "דום", "וולברין","הענק הירוק", 4,"סרטים", "he"));
+            questionDao.insert(new Questions("מי ביים את קיל ביל","טרנטינו", "שפילברג", "מרטין סקורסזה","כריסטופר נולאן", 1,"סרטים", "he"));
+            questionDao.insert(new Questions("מי ביים את התחלה","טרנטינו", "שפילברג", "מרטין סקורסזה","כריסטופר נולאן", 4,"סרטים", "he"));
+            questionDao.insert(new Questions("מי שיחק את הגלדיאטור","ג'רארד באטלר", "טום קרוז", "ראסל קרואו","בראד פיט", 2,"סרטים", "he"));
+            questionDao.insert(new Questions("מי שיחק את המסכה","ג'ים קארי", "סשה ברון כהן", "אדם סנדלר","בראד פיט", 1,"סרטים", "he"));
+
+
+            questionDao.insert(new Questions("The national dish in Israel is Falafel","True", "Pasta", "Pizza","Hamburger", 1,"Food", "en"));
+            questionDao.insert(new Questions("The national dish in Italy is ___","Hamburger", "Pasta", "Hummus","Mayo", 2,"Food", "en"));
+            questionDao.insert(new Questions("Pasta bolognese is a mixture of pasta with ___","Cheese", "Fishes", "Meat","Sea Food", 3,"Food", "en"));
+            questionDao.insert(new Questions("Quba okra belongs to the Iraqi community","Marrocco", "England", "French","True", 4,"Food", "en"));
+            questionDao.insert(new Questions("The origin of the khachapuri is in ___","Australian", "Vienna", "Georgia","Island", 3,"Food", "en"));
+            questionDao.insert(new Questions("One of the ingredients in hummus is Thina","Parsley", "True", "Mushroom","Garlic", 2,"Food", "en"));
+            questionDao.insert(new Questions("Tabasco was invented in ___","Japan", "China", "True","Spain", 4,"Food", "en"));
+            questionDao.insert(new Questions("The most eaten food in the world is rice","True", "Chick", "Salad","Chicken", 1,"Food", "en"));
+            questionDao.insert(new Questions("Chicken is part of its origin in the ___","Cow", "Goat", "Chicken is vegetarian","Chicken", 4,"Food", "en"));
+            questionDao.insert(new Questions("Tea is the most consumed drink in the world","Water is the drink", "Cola is the drink", "True","Beer is the drink", 3,"Food", "en"));
+            questionDao.insert(new Questions("Meat aging is a controlled decomposition process of the meat","True", "Process of lubrication", "Process of freezing","Process of cutting", 1,"Food", "en"));
+            questionDao.insert(new Questions("Tea with milk originated in ___","England", "Israel", "Finland","Spain", 1,"Food", "en"));
+            questionDao.insert(new Questions("McDonald's is the chain that sells the Big Mac dish","Burgeranch", "Burger King", "True","Hadson", 3,"Food", "en"));
+            questionDao.insert(new Questions("The main ingredient in Falafel is ___","Thina", "Hummus", "Vegetable","Oil", 2,"Food", "en"));
+            questionDao.insert(new Questions("The most eaten food in the world is ___","Rice", "Onion", "Meat","Pasta", 4,"Food", "en"));
+
+            questionDao.insert(new Questions("המאכל הלאומי בישראל הוא ___","פלאפל", "פסטה", "המבורגר","פיצה", 1,"אוכל", "he"));
+            questionDao.insert(new Questions("המאכל הלאומי באיטליה הוא ___","המבורגר", "פסטה", "חומוס","מיונז", 2,"אוכל", "he"));
+            questionDao.insert(new Questions("פסטה בולונז היא תערבות של פסטה עם ___","גבינות", "דגים", "בשר","פירות ים", 3,"אוכל", "he"));
+            questionDao.insert(new Questions("קובה במיה שייך לעדה העיראקית","מרוקאית", "אנגלית", "צרפתית","נכון", 4,"אוכל", "he"));
+            questionDao.insert(new Questions("מקור החצ'פורי הוא ב___","גאורגיה", "אוסטרליה", "וינה","איסלנד", 1,"אוכל", "he"));
+            questionDao.insert(new Questions("המרכיב העיקרי בחומוס הוא טחינה","פטרוזיליה", "נכון", "פטריות","שום", 2,"אוכל", "he"));
+            questionDao.insert(new Questions("הטבסקו הומצא במקסיקו","יפן", "סין", "נכון","ספרד", 4,"אוכל", "he"));
+            questionDao.insert(new Questions("המאכל הנאכל ביותר בעולם הוא ___","אורז", "פרגיות", "סלט","עוף", 1,"אוכל", "he"));
+            questionDao.insert(new Questions("תה הוא המשקה הנצרך ביותר בעולם","מים", "קולה", "נכון","בירה", 3,"אוכל", "he"));
+            questionDao.insert(new Questions("עישון בשר הוא הרקבה הכנה מבוקר של הבשר","נכון", "תהליך של שימון", "תהליך של הקפאה","תהליך של חיתוך", 1,"אוכל", "he"));
+            questionDao.insert(new Questions("תה עם חלב מקורו ב___","פינלנד", "אנגליה", "ישראל","ספרד", 2,"אוכל", "he"));
+            questionDao.insert(new Questions("מקדונלדס היא הרשת שמוכרת את מנת הביג מק","בורגראנץ", "נכון", "בורגר קינג","האדסון", 2,"אוכל", "he"));
+            questionDao.insert(new Questions("המרכיב העיקרי בפלאפל הוא ___","טחינה", "חומוס", "ירק","שמן", 2,"אוכל", "he"));
+            questionDao.insert(new Questions("המזון הנצרך ביותר בעולם הוא ___","אורז", "בצל", "בשר","פסטה", 4,"אוכל", "he"));
+            questionDao.insert(new Questions("פרגית היא חלק שמקורו ב___","פרה", "עז", "פרגית זה טבעוני","תרנגול", 4,"אוכל", "he"));
+
+
+            Log.d("TRIVIA", "doInBackground: end insert");
+
+
             return null;
         }
     }
