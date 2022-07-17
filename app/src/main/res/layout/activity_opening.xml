@@ -10,12 +10,21 @@
     android:padding="18dp"
     tools:context=".OpeningActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_marginTop="-70dp"
+        android:layout_width="match_parent"
+        android:layout_height="238dp"
+        app:srcCompat="@drawable/trivia_opening" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_slab_bold"
         android:text="@string/title_text_opening"
+        android:layout_marginTop="50dp"
         android:textColor="@color/light_gray_txt_color"
         android:textSize="30sp" />
 
@@ -29,6 +38,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
             app:cardBackgroundColor="#1A5A54"
             app:cardCornerRadius="8dp"
             app:cardElevation="6dp"
