@@ -94,7 +94,7 @@ abstract class QuestionRoomDatabase extends RoomDatabase {
             questionDao.insert(new Questions("In which year did Justin Bieber release Baby","2012", "2009", "2006","2007", 2,"Music", "en"));
             questionDao.insert(new Questions("Who sang in James Bond movie (Skyfall)","Adele", "Rihanna", "Tina Turner","Madonna", 1,"Music", "en"));
             questionDao.insert(new Questions("What is the real name of Elton john","Paul David Hewson", "Robyn Fenty", "Stevland Hardaway Judkins","Reginald Dwight", 4,"Music", "en"));
-            questionDao.insert(new Questions("Israel won the Eurovision Song Contest for the first time in 1958","False", "In 1966", "In 1959","In 1988", 1,"Music", "en"));
+            questionDao.insert(new Questions("Israel won the Eurovision Song Contest for the first time in ___","none", "In 1966", "In 1959","In 1988", 1,"Music", "en"));
             questionDao.insert(new Questions("Lior Narkis represented Israel at the Eurovision Song Contest?","No, Yehuda Levy represent", "True", "No, Haim Ifergan represent","No, Reuven the angel represent", 2,"Music", "en"));
             questionDao.insert(new Questions("What is the real name of Reuven the Angel?","Reuven levy is the real name", "Reuven Alfasi is the real name", "Reuven Shimoni is the real name","Reuven Cohen is the real name", 3,"Music", "en"));
             questionDao.insert(new Questions("Eyal Golan's first song was released in 1973","In 1999", "True", "In 1990","In 1993", 4,"Music", "en"));
@@ -109,13 +109,13 @@ abstract class QuestionRoomDatabase extends RoomDatabase {
 
 
             questionDao.insert(new Questions("מה הוא שמו האמיתי של אלטון ג'ון","פ'ול דיוויד", "רובין פנטי", "סטיב הארדווי ג'נקינס","רדינאלד דוויט", 4,"מוזיקה", "he"));
-            questionDao.insert(new Questions("ישראל זכתה בארוויזיון בפעם הראשונה ב1958","לא נכון", "1966", "1959","1988", 1,"מוזיקה", "he"));
+            questionDao.insert(new Questions("ישראל זכתה בארוויזיון בפעם הראשונה בשנת ___","אף תשובה לא נכונה", "1966", "1959","1988", 1,"מוזיקה", "he"));
             questionDao.insert(new Questions("ליאור נרקיס ייצג את ישראל בארוויזיון?","לא, חיים איפרגן ייצג", "נכון", "לא, יהודה לוי ייצג","לא, ראובן המלאך ייצג", 2,"מוזיקה", "he"));
             questionDao.insert(new Questions("באיזו שנה יצאו לאור שירו של ג'סטין ביבר בייבי?","2012", "2009", "2006","2007", 2,"מוזיקה", "he"));
             questionDao.insert(new Questions("מה השם האמיתי של ראובן המלאך?","ראובן לוי", "ראובן אלפסי", "ראובן שמעוני","ראובן כהן", 3,"מוזיקה", "he"));
             questionDao.insert(new Questions("השיר הראשון של אייל גולן יצא בשנת 1973","יצא בשנת 1973", "יצא בשנת 1999", "נכון","יצא בשנת 1993", 4,"מוזיקה", "he"));
             questionDao.insert(new Questions("השיר גיטרה וכינור של אריק איינשטיין נכתב על ידי שלום חנוך","אריק איינשטיין כתב", "נכון", "שם טוב לוי כתב","יהונתן גפן כתב", 2,"מוזיקה", "he"));
-            questionDao.insert(new Questions("יצחק קלפטר היה בלהקת כוורת ","בלהקת משינה", "נכון", "בלהקת היי פייב","בלהקת החלונות הגבוהים", 2,"מוזיקה", "he"));
+            questionDao.insert(new Questions("יצחק קלפטר היה בלהקת כוורת","בלהקת משינה", "נכון", "בלהקת היי פייב","בלהקת החלונות הגבוהים", 2,"מוזיקה", "he"));
             questionDao.insert(new Questions("מתי כספי הלחין את המוזיקה של חגיגה בסנוקר","נכון", "ליאור נרקיס", "משה פרץ","שלמה ארצי", 1,"מוזיקה", "he"));
             questionDao.insert(new Questions("מי שר את שיר הפתיחה בסרט סקייפול של ג'יימס בונד","אדל", "ריהאנה", "טינה טרנר","מדונה", 1,"מוזיקה", "he"));
             questionDao.insert(new Questions("האלבום הראשון של אביב גפן היה \"זה רק אור הירח\" ","נכון", "את ואני", "שנים אבודות","בני היה פה", 1,"מוזיקה", "he"));
