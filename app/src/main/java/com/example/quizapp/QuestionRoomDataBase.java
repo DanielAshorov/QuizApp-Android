@@ -57,14 +57,14 @@ abstract class QuestionRoomDatabase extends RoomDatabase {
         protected Void doInBackground(Void... voids) {
 
             Log.d("TRIVIA", "doInBackground: start insert");
-            questionDao.insert(new Questions("Arsenal have won the only championship without a league loss", "True", "False", "Two Teams Hold This Record", "Everton Holds The Record", 1,"Sport", "en"));
-            questionDao.insert(new Questions("Chelsea holds the lowest absorption record in the Premier League?","True", "False", "No,Man.United did","No,Arsenal did", 1,"Sport", "en"));
+            questionDao.insert(new Questions("Arsenal have won the only championship without a league loss", "True", "Three Teams Hold This Record", "Two Teams Hold This Record", "Everton Holds The Record", 1,"Sport", "en"));
+            questionDao.insert(new Questions("Chelsea holds the lowest absorption record in the Premier League?","True", "Man City holds the record", "Man United holds the record","Arsenal holds the record", 1,"Sport", "en"));
             questionDao.insert(new Questions("The Olympics are held every how many years?","5", "2", "4","8", 3,"Sport", "en"));
-            questionDao.insert(new Questions("Real Madrid record holders of Champions League wins","True", "False", "Milan Holds The Record","Man.United Holds The Record", 1,"Sport", "en"));
-            questionDao.insert(new Questions("Yossi Benayoun scored a goal against Real Madrid","Scored vs Barcelona", "False", "He didnt scord in the CL","True",  4,"Sport", "en"));
+            questionDao.insert(new Questions("Real Madrid record holders of Champions League wins","True", "Man City Holds The Record", "Milan Holds The Record","Man United Holds The Record", 1,"Sport", "en"));
+            questionDao.insert(new Questions("Yossi Benayoun scored a goal against Real Madrid","Scored vs Barcelona", "False", "He never scored in the UCL","True",  4,"Sport", "en"));
             questionDao.insert(new Questions("Cristiano Ronaldo plays for","Portugal", "Spain", "Argentina","Israel", 1,"Sport", "en"));
-            questionDao.insert(new Questions("The record holder of titles in tennis is Novak Djokovic","True", "No, Andy Murray holds the record", "No, Federrer holds the record","False", 4,"Sport", "en"));
-            questionDao.insert(new Questions("Which of the following won the Champions League","Neymar", "Paul Pogba", "Antoine Griezmann","Eden Hazard ", 1,"Sport", "en"));
+            questionDao.insert(new Questions("The record holder of titles in tennis is Novak Djokovic","True", "No, Andy Murray holds the record", "No, Federer holds the record","No, Sahar Peer holds the record", 4,"Sport", "en"));
+            questionDao.insert(new Questions("Which of the following won the Champions League","Neymar", "Paul Pogba", "Antoine Griezmann","Jack Wilshere", 1,"Sport", "en"));
             questionDao.insert(new Questions("Which of the following clubs is not from London","Tottenham", "Chelsea", "Everton","Arsenal", 3,"Sport", "en"));
             questionDao.insert(new Questions("Andy Murray won Wimbledon in 2016","No. Won in 2013", "True", "No. Won in 2015.","No. Won in 2014.", 2,"Sport", "en"));
             questionDao.insert(new Questions("Maccabi Tel Aviv basketball team has won the European Cup 5 times", "True", "Won 6 Times", "Won 2 Times", "Won 7 Times", 2,"Sport", "en"));
@@ -74,14 +74,14 @@ abstract class QuestionRoomDatabase extends RoomDatabase {
             questionDao.insert(new Questions("Chelsea have won the Champions League 4 times","True", "3", "1","2",  4,"Sport", "en"));
 
 
-            questionDao.insert(new Questions("ארסנל זכו באליפות היחידה ללא הפסד ליגה", "לא נכון", "נכון", "שתי קבוצות מחזיקות בשיא יחד", "אברטון מחזיקה בשיא", 2,"ספורט", "he"));
-            questionDao.insert(new Questions("צ'לסי מחזיקה בשיא הספיגות הנמוך ביותר בפריימרליג","נכון", "לא נכון", "מנצ'סטר יונייטד מחזיקה בשיא","ארסנל מחזיקה בשיא", 1,"ספורט", "he"));
+            questionDao.insert(new Questions("ארסנל זכו באליפות היחידה ללא הפסד ליגה", "שלוש קבוצות מחזיקות בשיא יחד", "נכון", "שתי קבוצות מחזיקות בשיא יחד", "אברטון מחזיקה בשיא", 2,"ספורט", "he"));
+            questionDao.insert(new Questions("צ'לסי מחזיקה בשיא הספיגות הנמוך ביותר בפריימרליג","נכון", "מנצ'סטר סיטי מחזיקה בשיא", "מנצ'סטר יונייטד מחזיקה בשיא","ארסנל מחזיקה בשיא", 1,"ספורט", "he"));
             questionDao.insert(new Questions("בכל כמה שנים מתקיימת האולימפיאדה?","5", "2", "4","8", 3,"ספורט", "he"));
-            questionDao.insert(new Questions("ריאל מדריד שיאנית זכיות ליגת האלופות","לא נכון", "נכון", "מנצסטר יונייטד מחזיקה בשיא","מילאן מחזיקה בשיא", 2,"ספורט", "he"));
-            questionDao.insert(new Questions("יוסי בניון כבש שער נגד ריאל מדריד","כבש נגד ברצלונה", "לא נכון", "לא כבש בליגת האלופות","נכון",  4,"ספורט", "he"));
+            questionDao.insert(new Questions("ריאל מדריד שיאנית זכיות ליגת האלופות","צ'לסי מחזיקה בשיא", "נכון", "מנצ'סטר יונייטד מחזיקה בשיא","מילאן מחזיקה בשיא", 2,"ספורט", "he"));
+            questionDao.insert(new Questions("יוסי בניון כבש שער נגד ריאל מדריד","כבש נגד ברצלונה", "לא נכון", "לא כבש מעולם בליגת האלופות","נכון",  4,"ספורט", "he"));
             questionDao.insert(new Questions("כריסטיאנו רונאלדו משחק עבור","פורטוגל", "ספרד", "ארגנטינה","ישראל", 1,"ספורט", "he"));
-            questionDao.insert(new Questions("ג'וקוביץ' מחזיק בכמות התארים הגדולה ביותר של טניסאי בהיסטוריה","נכון", "אנדי מארי מחזיק בשיא זה", "פדרר מחזיק בשיא זה","לא נכון", 4,"ספורט", "he"));
-            questionDao.insert(new Questions("מי מהבאים זכה בליגת האלופות","ניימאר", "פול פוגבה", "אנטואן גריזמן","עדן הזארד ", 1,"ספורט", "he"));
+            questionDao.insert(new Questions("ג'וקוביץ' מחזיק בכמות התארים הגדולה ביותר של טניסאי בהיסטוריה","נכון", "אנדי מארי מחזיק בשיא זה", "פדרר מחזיק בשיא זה","שחר פאר מחזיקה בשיא זה", 4,"ספורט", "he"));
+            questionDao.insert(new Questions("מי מהבאים זכה בליגת האלופות","ניימאר", "פול פוגבה", "אנטואן גריזמן","ג'ק ווילשר", 1,"ספורט", "he"));
             questionDao.insert(new Questions("מי מהמועדנים הבאים אינו מלונדון","טוטנהאם", "צ'לסי", "אברטון","ארסנל", 3,"ספורט", "he"));
             questionDao.insert(new Questions("אנדי מארי זכה בווימבלדון בשנת 2016","זכה ב2013", "נכון", "זכה ב2015","זכב ב2014", 2,"ספורט", "he"));
             questionDao.insert(new Questions("מכבי תל אביב בכדורסל זכו 5 פעמים בגביע אירופה", "נכון", "זכו פעמיים", "זכו 6 פעמים", "זכו 7 פעמים", 3,"ספורט", "he"));

@@ -38,7 +38,7 @@
     <string name="txtScore">Score: 0</string>
     <string name="button_Next">Confirm</string>
     <string name="txt_result_title">Result of Quiz </string>
-    <string name="result_tv_HighScore">High Score :  </string>
+    <string name="result_tv_HighScore">High Score:  </string>
     <string name="result_tv_Num_of_Ques">Total Questions:  </string>
     <string name="result_tv_correct_Ques">Correct:  </string>
     <string name="result_tv_wrong_Ques">Wrong:  </string>
