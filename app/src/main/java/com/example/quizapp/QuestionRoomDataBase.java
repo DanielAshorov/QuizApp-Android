@@ -160,20 +160,42 @@ abstract class QuestionRoomDatabase extends RoomDatabase {
             questionDao.insert(new Questions("נהוג לומר שיש לחתול ___ נשמות","8", "1", "4","9", 4,"חיות", "he"));
 
 
-            questionDao.insert(new Questions("Who is 007","Superman", "James Bond", "Ben Afflek","Richard Harrison", 2,"Movies", "en"));
-            questionDao.insert(new Questions("Who is part of the Avengers","Batman", "Doom", "Wolverine","Hulk", 4,"Movies", "en"));
-            questionDao.insert(new Questions("Who directed \"Kill Bill\"","Tarantino", "Spielberg", "Scorsese Martin","Christopher Nolan", 1,"Movies", "en"));
-            questionDao.insert(new Questions("Who directed \"Inception\"","Tarantino", "Spielberg", "Scorsese Martin","Christopher Nolan", 4,"Movies", "en"));
-            questionDao.insert(new Questions("Who played \"The Gladiator\"","Gerard Butler", "Tom Cruz", "Russell Crowe","Brad Pitt", 2,"Movies", "en"));
-            questionDao.insert(new Questions("25.\tWho played \"The Mask\"","Jim Carrey", "Sasha Baron Cohen", "Adam Sandler","Brad Pitt", 1,"Movies", "en"));
+            questionDao.insert(new Questions("Harry Potter and the Philosopher's Stone is the ___ in the series","Second", "Third", "First","Fourth", 3,"Movies", "en"));
+            questionDao.insert(new Questions("Yosef Shiloah played ___in the movie Snooker Celebration","Charlie", "Sasson", "Miko","Salvador", 4,"Movies", "en"));
+            questionDao.insert(new Questions("In the movie The Matrix Nao takes the ___ ball","Blue", "Yellow", "Green","Red", 4,"Movies", "en"));
+            questionDao.insert(new Questions("The film Pulp Fiction was released in ___","1990", "1994", "1985","1978", 2,"Movies", "en"));
+            questionDao.insert(new Questions("Joker is a character in the world of ___","Batman", "Spiderman", "Disney","Borekas", 1,"Movies", "en"));
+            questionDao.insert(new Questions("The famous sentence of Robert De Niro ___ is taken from the movie \"Taxi Driver\"","Are you talking to me?", "Who call me?", "Those who believe are not afraid","Every Saturday there is a Saturday night", 1,"Movies", "en"));
+            questionDao.insert(new Questions("In the movie Charlie and a half, Miko said ___","Who's dealing with?", "What does the worm want?", "he's badly injured and we don't know what he has","Wallac who will marry you ya meatball", 3,"Movies", "en"));
+            questionDao.insert(new Questions("___ wrote the script for the \"Rocky\" films","Trantino", "Arnold Schwarzenegger", "Silvester Stallon","Zeev Revah", 3,"Movies", "en"));
+            questionDao.insert(new Questions("The highest-grossing film in history is ___","The Avangers", "Titanic", "Free-Shuli","Avatar", 4,"Movies", "en"));
+            questionDao.insert(new Questions("The real name of actress Lola in the movie \"Alex is sick of love\" is ___","Gila almagor", "Sara Hacohen", "Lola lil","Hana Laslao", 2,"Movies", "en"));
+            questionDao.insert(new Questions("The first dark-skinned woman to win an Oscar for Best Actress is ___","Halle Berry", "Jennifer Aniston", "Courney Cox","Scarllett Johansson", 1,"Movies", "en"));
+            questionDao.insert(new Questions("A third ___ created the Israeli film \"Free Shuli\"","Pale Tracker", "Prozak", "Ma Kashur","Mango band", 3,"Movies", "en"));
+            questionDao.insert(new Questions("In the movie Charlie and half Charlie's mother is called ___","Flora", "Shoshana", "Salvadora","Adi", 1,"Movies", "en"));
+            questionDao.insert(new Questions("In the Harry Potter movie the name of the wizarding school is ___","Dambeldor", "Fishenzon", "Hogwarts","Darko", 3,"Movies", "en"));
+            questionDao.insert(new Questions("On the TV show in SpongeBob Patrick is a ___ type creature","Octopus", "Elephant", "Squirrel","Starfish", 4,"Movies", "en"));
+            questionDao.insert(new Questions("The Lion King was released in ___","1993", "1994", "1992","1990", 2,"Movies", "en"));
+            questionDao.insert(new Questions("The movie Fight Club was released in ___","1999", "1988", "1990","1993", 1,"Movies", "en"));
 
 
-            questionDao.insert(new Questions("מי הוא 007","סופרמן", "ג'יימס בונד", "בן אפלק","ריצ'רד באריסון", 2,"סרטים", "he"));
-            questionDao.insert(new Questions("מי הוא חלק מהנוקמים","באטמן", "דום", "וולברין","הענק הירוק", 4,"סרטים", "he"));
-            questionDao.insert(new Questions("מי ביים את קיל ביל","טרנטינו", "שפילברג", "מרטין סקורסזה","כריסטופר נולאן", 1,"סרטים", "he"));
-            questionDao.insert(new Questions("מי ביים את התחלה","טרנטינו", "שפילברג", "מרטין סקורסזה","כריסטופר נולאן", 4,"סרטים", "he"));
-            questionDao.insert(new Questions("מי שיחק את הגלדיאטור","ג'רארד באטלר", "טום קרוז", "ראסל קרואו","בראד פיט", 2,"סרטים", "he"));
-            questionDao.insert(new Questions("מי שיחק את המסכה","ג'ים קארי", "סשה ברון כהן", "אדם סנדלר","בראד פיט", 1,"סרטים", "he"));
+            questionDao.insert(new Questions("הארי פוטר ואבן החכמים הוא הסרט ה___ בסדרה","שני", "שלישי", "ראשון","רביעי", 3,"סרטים", "he"));
+            questionDao.insert(new Questions("יוסף שילוח שיחק את ___ בסרט חגיגה בסנוקר","צ'ארלי", "ששון", "מיקו","סלבדור", 4,"סרטים", "he"));
+            questionDao.insert(new Questions("בסרט מטריקס ניאו לוקח את הכדור ___","כחול", "צהוב", "ירוק","אדום", 4,"סרטים", "he"));
+            questionDao.insert(new Questions("הסרט ספרות זולה יצא לאור בשנת ___","1990", "1994", "1985","1978", 2,"סרטים", "he"));
+            questionDao.insert(new Questions("ג'וקר היא דמות בעולם של ___","באטמן", "ספיידרמן", "דיסני","סרטי בורקס", 1,"סרטים", "he"));
+            questionDao.insert(new Questions("המשפט המפורסם של רוברט דה נירו ___ שלקוח מהסרט נהג מונית","אתה מדבר אליי?", "מי קרא לי?", "מי שמאמין לא מפחד","לכל שבת יש מוצאי שבת", 1,"סרטים", "he"));
+            questionDao.insert(new Questions("בסרט צ'רלי וחצי אמר מיקו ___","מה רוצה התולעת?", "מי מתעסק?", "הוא פצוע קשה לא יודעים מה יש לו","וואלק מי תתחתן איתך יא קציצה", 3,"סרטים", "he"));
+            questionDao.insert(new Questions("___ כתב את התסריט של סרטי רוקי","ארנולד שווארצאנגר", "קוונטין טרנטינו", "סילבסטר סטאלון","זאב רווח", 3,"סרטים", "he"));
+            questionDao.insert(new Questions("הסרט המכניס ביותר בהיסטוריה הוא ___","הנוקמים", "טיטאניק", "לשחרר את שולי","אוואטר", 4,"סרטים", "he"));
+            questionDao.insert(new Questions("שמה האמיתי של השחקנית לולה בסרט \"אלכס חולה אהבה\" הוא ___","גילה אלמגור", "שרה הכהן", "לולה ליל","חנה לסלאו", 2,"סרטים", "he"));
+            questionDao.insert(new Questions("האישה כהת העור הראשונה שזכתה באוסקר בפרס השחקנית הטובה ביותר היא ___","האלי בארי", "ג'ניפר אניסטון", "קורטני קוקס","סקרלט ג'והנסון", 1,"סרטים", "he"));
+            questionDao.insert(new Questions("שלישית ___ יצרה את הסרט הישראלי לשחרר את שולי","הגשש החיוור", "פרוזק", "מה קשור","מנגו", 3,"סרטים", "he"));
+            questionDao.insert(new Questions("בסרט צ'רלי וחצי אימו של צ'רלי נקראת ___","פלורה", "שושנה", "סלבדורה","עדי", 1,"סרטים", "he"));
+            questionDao.insert(new Questions("בסרט הארי פוטר שמו של בית הספר לקוסמים הוא ___","דמבלדור", "פישנזון", "הוגוורטס","דארקו", 3,"סרטים", "he"));
+            questionDao.insert(new Questions("בתוכנית הטלוויזיה בבוספוג פטריק הוא יצור מסוג ___","תמנון", "פיל", "סנאי","כוכב ים", 4,"סרטים", "he"));
+            questionDao.insert(new Questions("הסרט מלך האריות יצא לאור בשנת ___","1993", "1994", "1992","1990", 2,"סרטים", "he"));
+            questionDao.insert(new Questions("הסרט מועדון קרב יצא לאור בשנת ___","1999", "1998", "1990","1993", 1,"סרטים", "he"));
 
 
             questionDao.insert(new Questions("The national dish in Israel is Falafel","True", "Pasta", "Pizza","Hamburger", 1,"Food", "en"));
