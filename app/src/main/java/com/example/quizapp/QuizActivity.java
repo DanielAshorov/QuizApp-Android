@@ -1,7 +1,7 @@
 package com.example.quizapp;
 
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -16,21 +16,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
+import java.util.logging.ConsoleHandler;
 
 public class QuizActivity extends AppCompatActivity {
 
     TextView txtQuestion;
+    private Toast toast;
     TextView textViewScore,textViewQuestionCount,textViewCountDownTimer;
+    private static String scoreText;
+    private static String questionText;
     RadioButton rb1,rb2,rb3,rb4;
     RadioGroup rbGroup;
     Button buttonNext;
-    boolean answerd = false;
+    boolean answered = false;
     List<Questions> quesList;
     Questions currentQ;
     private int questionCounter=0,questionTotalCount;
@@ -47,9 +52,12 @@ public class QuizActivity extends AppCompatActivity {
     private PlayAudioForAnswers playAudioForAnswers;
     private static final long COUNTDOWN_IN_MILLIS = 30000;
     private CountDownTimer countDownTimer;
-    private long timeLeftinMillis;
+    private long timeLeftInMillis;
     private long backPressedTime;
     private String CategoryValue ="";
+
+    public QuizActivity() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,11 +68,9 @@ public class QuizActivity extends AppCompatActivity {
         setupUI();
         // this is used to change the text colors of the buttons
         textColorofButtons = rb1.getTextColors();
-
-
-
+        String answerText = getString(R.string.the_correct_answer_is);
         timerDialog =  new TimerDialog(this);
-        wrongDialog =  new WrongDialog(this);
+        wrongDialog =  new WrongDialog(this, answerText);
         correctDialog = new CorrectDialog(this);
         playAudioForAnswers = new PlayAudioForAnswers(this);
 
@@ -72,11 +78,11 @@ public class QuizActivity extends AppCompatActivity {
         CategoryValue = intent.getStringExtra("Category");
 
         String language = getString(R.string.language);
-        Log.d("TRIVIA", "onCreate: before viewmodel");
-        questionViewModel = ViewModelProviders.of(this).get(QuestionViewModel.class);
+        Log.d("TRIVIA", "onCreate: before viewModel");
+        questionViewModel = new ViewModelProvider(this).get(QuestionViewModel.class);
         Log.d("TRIVIA", "onCreate: calling getAllQuestionByCategory with category=" + CategoryValue);
 
-        questionViewModel.getAllQuestionByCategory(CategoryValue,language).observe(this, new Observer<List<Questions>>() {
+        questionViewModel.getAllQuestionByCategory(CategoryValue, language).observe(this, new Observer<List<Questions>>() {
             @Override
             public void onChanged(@Nullable List<Questions> questions) {
                 //first time check the questions
@@ -89,12 +95,14 @@ public class QuizActivity extends AppCompatActivity {
 
             }
         });
-        Log.i("DATATA","onCreate() in QuizActivity");
+        Log.i("DATA","onCreate() in QuizActivity");
     }
 
 
     void setupUI(){
 
+        questionText = getString(R.string.question_txt);
+        scoreText = getString(R.string.txtScore);
         textViewCountDownTimer = findViewById(R.id.txtTimer);
         textViewScore = findViewById(R.id.txtScore);
         textViewQuestionCount = findViewById(R.id.txtTotalQuestion);
@@ -138,11 +146,12 @@ public class QuizActivity extends AppCompatActivity {
             rb3.setText(currentQ.getOptC());
             rb4.setText(currentQ.getOptD());
             questionCounter++;
-            answerd = false;
+            answered = false;
 
-            textViewQuestionCount.setText( "Questions" + questionCounter +"/" +(questionTotalCount-1));
+
+            textViewQuestionCount.setText( questionText + " " + questionCounter +"/" +(questionTotalCount-1));
             Log.d("TRIVIA", "current question: " + currentQ.getQuestion());
-            timeLeftinMillis = COUNTDOWN_IN_MILLIS;
+            timeLeftInMillis = COUNTDOWN_IN_MILLIS;
             startCountDown();
 
         }else {
@@ -215,13 +224,14 @@ public class QuizActivity extends AppCompatActivity {
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!answerd){
+                if (!answered){
                     if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked()){
 
                         quizOpeartion();
 
                     }else {
-                        Toast.makeText(QuizActivity.this, "Please Select Answer", Toast.LENGTH_SHORT).show();
+                        String selectAnswer = getString(R.string.select_answer);
+                        Toast.makeText(QuizActivity.this, selectAnswer, Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -245,157 +255,93 @@ public class QuizActivity extends AppCompatActivity {
 
     private void quizOpeartion() {
 
-        answerd = true;
+        answered = true;
         countDownTimer.cancel();
-        RadioButton rbselected =  findViewById(rbGroup.getCheckedRadioButtonId());
-        int answerNr = rbGroup.indexOfChild(rbselected) +1;
-        checkSolution(answerNr,rbselected);
+        RadioButton rbSelected =  findViewById(rbGroup.getCheckedRadioButtonId());
+        int answerNr = rbGroup.indexOfChild(rbSelected) +1;
+        checkSolution(answerNr,rbSelected);
 
     }
 
-    private void checkSolution(int answerNr, RadioButton rbselected) {
+    private void checkSolution(int answerNr, RadioButton rbSelected) {
 
-        switch (currentQ.getAnswer()) {
+        if(currentQ.getAnswer() == answerNr)
+        {
+            correctAns++;
+            score +=10;
+            textViewScore.setText(scoreText + String.valueOf(score));
+            rbSelected.setTextColor(Color.GREEN);
+            correctDialog.correctDialog(score,this);
+            FLAG = 1;
+        }
+        else {
+            RadioButton answer;
 
-            case 1:
+            switch(currentQ.getAnswer())
+            {
+                case 1:
+                    answer = rb1;
+                    break;
+                case 2:
+                    answer = rb2;
+                    break;
+                case 3:
+                    answer = rb3;
+                    break;
+                case 4:
+                    answer = rb4;
+                    break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + currentQ.getAnswer());
+            }
 
-                if (currentQ.getAnswer() == answerNr) {
-              rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.when_answer_correct));
-                    rb1.setTextColor(Color.WHITE);
-                    correctAns++;
-                    score +=10;  // score = score + 10
-                    textViewScore.setText(textViewScore.getText().toString() + String.valueOf(score));
-                    correctDialog.correctDialog(score,this);
-                    FLAG = 1;
-                    playAudioForAnswers.setAudioforAnswers(FLAG);
-
-                } else {
-
-                    changetoIncorrectColor(rbselected);
-                    wrongAns++;
-                    final String correctAnswer = (String) rb1.getText();
-                    wrongDialog.WrongDialog(correctAnswer,this);
-                    FLAG = 2;
-                    playAudioForAnswers.setAudioforAnswers(FLAG);
-                }
-                break;
-
-
-            case 2:
-
-                if (currentQ.getAnswer() == answerNr) {
-                    rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.when_answer_correct));
-                    rb2.setTextColor(Color.WHITE);
-                    correctAns++;
-                    score +=10;  // score = score + 10
-                    textViewScore.setText(textViewScore.getText().toString()+ String.valueOf(score));
-                    correctDialog.correctDialog(score,this);
-                    FLAG = 1;
-                    playAudioForAnswers.setAudioforAnswers(FLAG);
-
-                } else
-                    {
-                        changetoIncorrectColor(rbselected);
-                    wrongAns++;
-                    final String correctAnswer = (String) rb2.getText();
-                    wrongDialog.WrongDialog(correctAnswer,this);
-                    FLAG = 2;
-                    playAudioForAnswers.setAudioforAnswers(FLAG);
-                }
-                break;
-
-            case 3:
-
-                if (currentQ.getAnswer() == answerNr) {
-
-                     rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.when_answer_correct));
-                     rb3.setTextColor(Color.WHITE);
-                    correctAns++;
-                    score +=10;  // score = score + 10
-                    textViewScore.setText(textViewScore.getText().toString() + String.valueOf(score));
-                    correctDialog.correctDialog(score,this);
-                    FLAG = 1;
-                    playAudioForAnswers.setAudioforAnswers(FLAG);
-
-                } else {
-
-                    changetoIncorrectColor(rbselected);
-                    wrongAns++;
-                    final String correctAnswer = (String) rb3.getText();
-                    wrongDialog.WrongDialog(correctAnswer,this);
-                    FLAG = 2;
-                    playAudioForAnswers.setAudioforAnswers(FLAG);
-                }
-                break;
-
-
-            case 4:
-
-                if (currentQ.getAnswer() == answerNr) {
-
-                    rb4.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.when_answer_correct));
-                    rb4.setTextColor(Color.WHITE);
-                    correctAns++;
-                    score +=10;  // score = score + 10
-                    textViewScore.setText(textViewScore.getText().toString() + String.valueOf(score));
-                    correctDialog.correctDialog(score,this);
-                    FLAG = 1;
-                    playAudioForAnswers.setAudioforAnswers(FLAG);
-
-                } else {
-
-                    changetoIncorrectColor(rbselected);
-                    wrongAns++;
-                    final String correctAnswer = (String) rb4.getText();
-                    wrongDialog.WrongDialog(correctAnswer,this);
-                    FLAG = 2;
-                    playAudioForAnswers.setAudioforAnswers(FLAG);
-                }
-                break;
+            changeToIncorrectColor(rbSelected);
+            wrongAns++;
+            final String correctAnswer = (String) answer.getText();
+            wrongDialog.showWrongDialog(correctAnswer,this);
+            FLAG = 2;
         }
 
-        if (questionCounter == questionTotalCount){
+        playAudioForAnswers.setAudioforAnswers(FLAG);
+
+        if (questionCounter == questionTotalCount)
             buttonNext.setText("Confirm and Finish");
-        }
-
     }
 
-    private void changetoIncorrectColor(RadioButton rbselected) {
-        rbselected.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_wrong));
-        rbselected.setTextColor(Color.WHITE);
+    private void changeToIncorrectColor(RadioButton rbSelected) {
+        rbSelected.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_wrong));
+        rbSelected.setTextColor(Color.RED);
     }
 
 
     // The timer code
     private void startCountDown() {
 
-        countDownTimer = new CountDownTimer(timeLeftinMillis,1000) {
+        countDownTimer = new CountDownTimer(timeLeftInMillis,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                timeLeftinMillis = millisUntilFinished;
+                timeLeftInMillis = millisUntilFinished;
                 updateCountDownText();
             }
 
             @Override
             public void onFinish() {
 
-                timeLeftinMillis = 0;
+                timeLeftInMillis = 0;
                 updateCountDownText();
-
             }
         }.start();
-
     }
 
     private void updateCountDownText() {
 
-        int minutes = (int) (timeLeftinMillis/1000) /60;
-        int seconds = (int) (timeLeftinMillis/1000) %60;
+        int minutes = (int) (timeLeftInMillis /1000) /60;
+        int seconds = (int) (timeLeftInMillis /1000) %60;
 
         String timeFormatted = String.format(Locale.getDefault(),"%02d:%02d",minutes, seconds);
         textViewCountDownTimer.setText(timeFormatted);
 
-        if (timeLeftinMillis <10000){
+        if (timeLeftInMillis <10000){
 
             textViewCountDownTimer.setTextColor(Color.RED);
             FLAG = 3;
@@ -405,7 +351,7 @@ public class QuizActivity extends AppCompatActivity {
             textViewCountDownTimer.setTextColor(ContextCompat.getColor(this,R.color.timerFontColor));
         }
 
-        if (timeLeftinMillis == 0){
+        if (timeLeftInMillis == 0){
 
             handler.postDelayed(new Runnable() {
                 @Override
@@ -445,26 +391,26 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-
-    @Override
-    public void onBackPressed() {
-
-        if (backPressedTime + 2000 > System.currentTimeMillis()){
-            Intent intent = new Intent(QuizActivity.this, CategoryActivity.class);
-            startActivity(intent);
-
-        }else {
-
-        }
-
-        backPressedTime = System.currentTimeMillis();
-
-    }
-
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i("DATATA","onStop() in QuizActivity");
+        Log.i("DATA","onStop() in QuizActivity");
         finish();
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            toast.cancel();
+            startActivity(new Intent(QuizActivity.this, CategoryActivity.class));
+            return;
+        }
+        else {
+            String clickTwice = getString(R.string.double_back_bt_exit);
+            toast = Toast.makeText(getBaseContext(), clickTwice, Toast.LENGTH_SHORT);
+            toast.show();
+        }
+        backPressedTime = System.currentTimeMillis();
     }
 }
