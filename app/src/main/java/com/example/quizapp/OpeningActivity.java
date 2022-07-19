@@ -25,6 +25,13 @@ public class OpeningActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed()
+    {
+        finishAffinity();
+        finish();
+    }
 }
 
 

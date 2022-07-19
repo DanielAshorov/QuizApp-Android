@@ -35,7 +35,7 @@
     <string name="bt_Science">Food</string>
     <string name="bt_Technology">Animals</string>
     <string name="txtTotalQuestion">Question: 1/20</string>
-    <string name="txtScore">Score: 0</string>
+    <string name="txtScore">Score: </string>
     <string name="button_Next">Confirm</string>
     <string name="txt_result_title">Result of Quiz </string>
     <string name="result_tv_HighScore">High Score:  </string>
@@ -44,7 +44,7 @@
     <string name="result_tv_wrong_Ques">Wrong:  </string>
     <string name="bt_result_main_menu">Main Menu:  </string>
     <string name="txt_correct_dialog">Correct  </string>
-    <string name="textView_Score">Score:  </string>
+    <string name="textView_Score">Score: </string>
     <string name="txt_correct_dialog_ok">OK  </string>
     <string name="txt_wrong_dialog">Wrong  </string>
     <string name="textView_Correct_Answer">Final Score:  </string>
@@ -54,5 +54,9 @@
     <string name="txt_TimesUp">Times Up!  </string>
     <string name="txt_GameOver">Game Over  </string>
     <string name="bt_Times_ok">OK  </string>
+    <string name="double_back_bt_exit">Press back again to exit</string>
+    <string name="select_answer">Please select Answer</string>
+    <string name="question_txt">Question</string>
+    <string name="the_correct_answer_is">Correct Answer: </string>
 
 </resources>

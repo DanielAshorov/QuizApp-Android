@@ -2,7 +2,6 @@ package com.example.quizapp;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.View;
@@ -13,26 +12,29 @@ class WrongDialog {
 
     private Context mContext;
     private Dialog wrongAnswerDialog;
-    private QuizActivity mquizActivity;
+    private QuizActivity mQuizActivity;
+    private static String answerText;
 
-    WrongDialog(Context mContext) {
+    WrongDialog(Context mContext, String answerText) {
         this.mContext = mContext;
+        this.answerText = answerText;
     }
 
-    void WrongDialog(String correctAnswer,QuizActivity quizActivity){
+    void showWrongDialog(String correctAnswer,QuizActivity quizActivity){
 
-        mquizActivity = quizActivity;
+        mQuizActivity = quizActivity;
         wrongAnswerDialog = new Dialog(mContext);
         wrongAnswerDialog.setContentView(R.layout.wrong_dialog);
-        final Button btwrongAnswerDialog = (Button) wrongAnswerDialog.findViewById(R.id.bt_wrongDialog);
+        final Button btWrongAnswerDialog = (Button) wrongAnswerDialog.findViewById(R.id.bt_wrongDialog);
         TextView textView = (TextView) wrongAnswerDialog.findViewById(R.id.textView_Correct_Answer);
-        textView.setText("Correct Ans: " + correctAnswer);
-        btwrongAnswerDialog.setOnClickListener(new View.OnClickListener() {
+
+        textView.setText(answerText + " " + correctAnswer);
+        btWrongAnswerDialog.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 wrongAnswerDialog.dismiss();
-                mquizActivity.setQuestionView();
+                mQuizActivity.setQuestionView();
             }
         });
 

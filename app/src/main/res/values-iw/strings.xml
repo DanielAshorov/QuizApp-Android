@@ -35,7 +35,7 @@
     <string name = "bt_Science">אוכל </string>
     <string name = "bt_Technology">חיות</string>
     <string name = "txtTotalQuestion">שאלות: </string>
-    <string name = "txtScore">ציון: 0</string>
+    <string name = "txtScore">ציון: </string>
     <string name = "button_Next">מאשר </string>
     <string name = "txt_result_title">תוצאות של הטריויה </string>
     <string name = "result_tv_HighScore">ניקוד גבוה:  </string>
@@ -54,7 +54,9 @@
     <string name = "txt_TimesUp">הזמן עבר! </string>
     <string name = "txt_GameOver">המשחק נגמר  </string>
     <string name = "bt_Times_ok">אוקי  </string>
-
-
+    <string name="double_back_bt_exit">לחץ שוב בשביל לצאת</string>
+    <string name="select_answer">אנא לבחור תשובה</string>
+    <string name="question_txt">שאלה</string>
+    <string name="the_correct_answer_is">התשובה הנכונה: </string>
 
 </resources>
