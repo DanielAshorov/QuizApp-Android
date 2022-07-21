@@ -26,11 +26,11 @@ public class CorrectDialog {
         correctDialog = new Dialog(mContext);
 
         correctDialog.setContentView(R.layout.correct_dialog);
-        final Button btcorrectDialog = (Button) correctDialog.findViewById(R.id.bt_Score_Dialog);
+        final Button buttonCorrectDialog = (Button) correctDialog.findViewById(R.id.button_Score_Dialog);
 
         Score(score);
 
-        btcorrectDialog.setOnClickListener(new View.OnClickListener() {
+        buttonCorrectDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

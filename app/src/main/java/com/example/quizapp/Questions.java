@@ -9,7 +9,6 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "questions_table")
 public class Questions {
 
-
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     private int id;
@@ -47,7 +46,6 @@ public class Questions {
         this.answer = answer;
         this.category = category;
         this.language = language;
-
     }
 
     Questions() {

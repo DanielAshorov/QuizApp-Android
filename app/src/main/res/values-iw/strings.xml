@@ -37,11 +37,11 @@
     <string name = "txtTotalQuestion">שאלות: </string>
     <string name = "txtScore">ציון: </string>
     <string name = "button_Next">מאשר </string>
-    <string name = "txt_result_title">תוצאות של הטריויה </string>
-    <string name = "result_tv_HighScore">ניקוד גבוה:  </string>
+    <string name = "txt_result_title">תוצאות של הטריוויה </string>
+    <string name = "result_tv_HighScore">ניקוד שיא:  </string>
     <string name = "result_tv_Num_of_Ques">סה"כ שאלות: </string>
-    <string name = "result_tv_correct_Ques">נכון:   </string>
-    <string name = "result_tv_wrong_Ques">לא נכון:  </string>
+    <string name = "result_tv_correct_Ques">סה"כ תשובות נכונות:   </string>
+    <string name = "result_tv_wrong_Ques">סה"כ תשובות לא נכונות:  </string>
     <string name = "bt_result_main_menu">שחק שוב:  </string>
     <string name = "txt_correct_dialog">נכון  </string>
     <string name = "textView_Score">ניקוד:  </string>
@@ -51,11 +51,11 @@
     <string name = "txt_wrong_dialog_ok">אוקי  </string>
     <string name = "txt_finalScore">תוצאה סופית  </string>
     <string name = "bt_finalScore_ok">אוקי  </string>
-    <string name = "txt_TimesUp">הזמן עבר! </string>
+    <string name = "txt_TimesUp">הזמן הסתיים, נסה שוב! </string>
     <string name = "txt_GameOver">המשחק נגמר  </string>
     <string name = "bt_Times_ok">אוקי  </string>
     <string name="double_back_bt_exit">לחץ שוב בשביל לצאת</string>
-    <string name="select_answer">אנא לבחור תשובה</string>
+    <string name="select_answer">אנא בחר תשובה</string>
     <string name="question_txt">שאלה</string>
     <string name="the_correct_answer_is">התשובה הנכונה: </string>
 
