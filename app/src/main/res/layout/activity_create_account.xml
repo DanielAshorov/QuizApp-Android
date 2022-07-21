@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF1A4A46"
+    android:background="#9126bd"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp"
@@ -67,7 +67,7 @@
         android:background="@android:color/transparent"
         android:paddingTop="32dp"
         android:text="@string/create_text"
-        android:textColor="@color/button_text_color"
+        android:textColor="#D18CE0"
         android:textStyle="bold" />
 
 

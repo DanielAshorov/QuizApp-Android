@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1A4A46"
+    android:background="#9126bd"
     android:paddingLeft="5dp"
     android:paddingRight="5dp"
     tools:context=".QuizActivity">
@@ -86,7 +86,7 @@
             android:shadowColor="@color/white"
             android:layout_gravity="center_horizontal"
             android:background="@color/white"
-            android:backgroundTint="#1A5A54"
+            android:backgroundTint="#ab2fb7"
             android:button="@null"
             android:layout_margin="15dp"
             android:text="@string/true_button"
@@ -95,7 +95,6 @@
             android:textSize="20sp"
             />
 
-        />
 
         <RadioButton
             android:id="@+id/radio_button2"
@@ -104,7 +103,7 @@
             android:layout_height="69dp"
             android:layout_gravity="center_horizontal"
             android:background="@color/white"
-            android:backgroundTint="#1A5A54"
+            android:backgroundTint="#ab2fb7"
             android:button="@null"
             android:layout_margin="15dp"
             android:text="@string/true_button"
@@ -120,7 +119,7 @@
             android:layout_height="69dp"
             android:layout_gravity="center_horizontal"
             android:background="@color/white"
-            android:backgroundTint="#1A5A54"
+            android:backgroundTint="#ab2fb7"
             android:button="@null"
             android:text="@string/true_button"
             android:textAlignment="center"
@@ -135,7 +134,7 @@
             android:layout_height="69dp"
             android:layout_gravity="center_horizontal"
             android:background="@color/white"
-            android:backgroundTint="#1A5A54"
+            android:backgroundTint="#ab2fb7"
             android:button="@null"
             android:text="@string/true_button"
             android:textAlignment="center"
@@ -148,12 +147,9 @@
     <Button
         android:id="@+id/button_Next"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
         android:layout_margin="20dp"
-        android:layout_marginBottom="40dp"
         android:layout_weight="1"
-        android:background="#1A5A54"
-        android:backgroundTint="#1A5A54"
+        android:backgroundTint="#ab2fb7"
         android:padding="5dp"
         android:textColor="@color/white"
         android:text="@string/button_Next"
@@ -161,7 +157,8 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="60dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

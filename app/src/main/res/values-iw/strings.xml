@@ -42,7 +42,7 @@
     <string name = "result_tv_Num_of_Ques">סה"כ שאלות: </string>
     <string name = "result_tv_correct_Ques">נכון:   </string>
     <string name = "result_tv_wrong_Ques">לא נכון:  </string>
-    <string name = "bt_result_main_menu">תפריט ראשי:  </string>
+    <string name = "bt_result_main_menu">שחק שוב:  </string>
     <string name = "txt_correct_dialog">נכון  </string>
     <string name = "textView_Score">ניקוד:  </string>
     <string name = "txt_correct_dialog_ok"> אוקי  </string>
