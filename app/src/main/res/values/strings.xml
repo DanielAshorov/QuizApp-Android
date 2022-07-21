@@ -37,11 +37,11 @@
     <string name="txtTotalQuestion">Question: 1/20</string>
     <string name="txtScore">Score: </string>
     <string name="button_Next">Confirm</string>
-    <string name="txt_result_title">Result of Quiz </string>
-    <string name="result_tv_HighScore">High Score:  </string>
+    <string name="txt_result_title">Result of your quiz </string>
+    <string name="result_tv_HighScore">Best Score:  </string>
     <string name="result_tv_Num_of_Ques">Total Questions:  </string>
-    <string name="result_tv_correct_Ques">Correct:  </string>
-    <string name="result_tv_wrong_Ques">Wrong:  </string>
+    <string name="result_tv_correct_Ques">Correct Answers:  </string>
+    <string name="result_tv_wrong_Ques">Wrong Answers:  </string>
     <string name="bt_result_main_menu">Play again  </string>
     <string name="txt_correct_dialog">Correct  </string>
     <string name="textView_Score">Score: </string>
@@ -55,7 +55,7 @@
     <string name="txt_GameOver">Game Over  </string>
     <string name="bt_Times_ok">OK  </string>
     <string name="double_back_bt_exit">Press back again to exit</string>
-    <string name="select_answer">Please select Answer</string>
+    <string name="select_answer">Please select an Answer</string>
     <string name="question_txt">Question</string>
     <string name="the_correct_answer_is">Correct Answer: </string>
 

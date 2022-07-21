@@ -16,14 +16,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
-import java.util.logging.ConsoleHandler;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -40,9 +38,9 @@ public class QuizActivity extends AppCompatActivity {
     Questions currentQ;
     private int questionCounter=0,questionTotalCount;
     private QuestionViewModel questionViewModel;
-    private ColorStateList textColorofButtons;
+    private ColorStateList textColorButtons;
     private Handler handler = new Handler();
-    private int correctAns = 0,wrongAns =0;
+    private int correctAns = 0, wrongAns =0;
     private int score=0;
     private TimerDialog timerDialog;
     private WrongDialog wrongDialog;
@@ -67,7 +65,7 @@ public class QuizActivity extends AppCompatActivity {
 
         setupUI();
         // this is used to change the text colors of the buttons
-        textColorofButtons = rb1.getTextColors();
+        textColorButtons = rb1.getTextColors();
         String answerText = getString(R.string.the_correct_answer_is);
         timerDialog =  new TimerDialog(this);
         wrongDialog =  new WrongDialog(this, answerText);
@@ -223,7 +221,7 @@ public class QuizActivity extends AppCompatActivity {
                 if (!answered){
                     if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked()){
 
-                        quizOpeartion();
+                        quizOperation();
 
                     }else {
                         String selectAnswer = getString(R.string.select_answer);
@@ -249,7 +247,7 @@ public class QuizActivity extends AppCompatActivity {
         paused = true;
     }
 
-    private void quizOpeartion() {
+    private void quizOperation() {
 
         answered = true;
         countDownTimer.cancel();
