@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1A4A46"
+    android:background="#9126bd"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp"
@@ -53,6 +53,8 @@
         style="@style/ButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#D18CE0"
+
         android:background="@android:color/transparent"
         android:text="@string/login_text"
         android:textStyle="bold" />
@@ -74,7 +76,8 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:text="@string/create_text"
-        android:textStyle="bold" />
+        android:textColor="#D18CE0"
+        android:textStyle="bold"/>
 
 
 </LinearLayout>

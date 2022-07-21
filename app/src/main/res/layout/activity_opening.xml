@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="#1A4A46"
+    android:background="#9126bd"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="18dp"
@@ -31,7 +31,6 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:gravity="center_horizontal"
-        android:backgroundTint="#1B213A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -40,7 +39,7 @@
             android:layout_height="90dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="0dp"
-            app:cardBackgroundColor="#1A5A54"
+            app:cardBackgroundColor="#ab2fb7"
             app:cardCornerRadius="8dp"
             app:cardElevation="6dp"
             app:cardUseCompatPadding="true">
@@ -61,7 +60,7 @@
     <Button
         android:id="@+id/startButton"
         android:text="@string/get_started_text"
-        android:textColor="@color/button_text_color"
+        android:textColor="@color/white"
         android:background="@android:color/transparent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

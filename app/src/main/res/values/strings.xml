@@ -42,7 +42,7 @@
     <string name="result_tv_Num_of_Ques">Total Questions:  </string>
     <string name="result_tv_correct_Ques">Correct:  </string>
     <string name="result_tv_wrong_Ques">Wrong:  </string>
-    <string name="bt_result_main_menu">Main Menu:  </string>
+    <string name="bt_result_main_menu">Play again  </string>
     <string name="txt_correct_dialog">Correct  </string>
     <string name="textView_Score">Score: </string>
     <string name="txt_correct_dialog_ok">OK  </string>
