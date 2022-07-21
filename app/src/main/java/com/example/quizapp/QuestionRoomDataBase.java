@@ -103,7 +103,7 @@ abstract class QuestionRoomDatabase extends RoomDatabase {
             questionDao.insert(new Questions("Maty Caspi composed the music of a celebration in snooker","True", "Lior Narkis", "Moshe Peretz","Sholomo Artzi", 1,"Music", "en"));
             questionDao.insert(new Questions("Aviv Geffen's first album was \"It's just the moonlight\"","True", "You and Me", "Lost Years","Beni Was here", 1,"Music", "en"));
             questionDao.insert(new Questions("Linkin Park Band was founded in ___","1989", "1996", "1992","1990", 2,"Music", "en"));
-            questionDao.insert(new Questions("The song \"Gang Ham Style\" published by a South Korean singer","North Korean", "Island", "French","True", 1,"Music", "en"));
+            questionDao.insert(new Questions("The song \"Gang Ham Style\" published by a South Korean singer","North Korean", "Island", "French","True", 4,"Music", "en"));
             questionDao.insert(new Questions("Noa Kirel lives in Petah Tikva","True", "Tel Aviv", "Kfar Sava","Raanana", 4,"Music", "en"));
             questionDao.insert(new Questions("Taylor Swift launched ___ albums in 2020","5", "3", "2","1", 3,"Music", "en"));
 

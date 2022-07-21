@@ -127,10 +127,6 @@ public class QuizActivity extends AppCompatActivity {
     public void setQuestionView(){
 
         rbGroup.clearCheck();
-        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_a));
-        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_b));
-        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_c));
-        rb4.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_d));
         rb1.setTextColor(Color.WHITE);
         rb2.setTextColor(Color.WHITE);
         rb3.setTextColor(Color.WHITE);
@@ -184,35 +180,35 @@ public class QuizActivity extends AppCompatActivity {
                 switch (checkedId){
 
                     case R.id.radio_button1:
+                        //button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
-                        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.selected_option_a));
-                        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_b));
-                        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_c));
-                        rb4.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_d));
+                        rb1.setTextColor(Color.RED);
+                        rb2.setTextColor(Color.WHITE);
+                        rb3.setTextColor(Color.WHITE);
+                        rb4.setTextColor(Color.WHITE);
                         break;
 
                     case R.id.radio_button2:
 
-                        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.selected_option_b));
-                        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_a));
-                        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_c));
-                        rb4.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_d));
+                        rb2.setTextColor(Color.RED);
+                        rb1.setTextColor(Color.WHITE);
+                        rb3.setTextColor(Color.WHITE);
+                        rb4.setTextColor(Color.WHITE);
                         break;
 
                     case R.id.radio_button3:
 
-                        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.selected_option_c));
-                        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_b));
-                        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_a));
-                        rb4.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_d));
+                        rb3.setTextColor(Color.RED);
+                        rb2.setTextColor(Color.WHITE);
+                        rb1.setTextColor(Color.WHITE);
+                        rb4.setTextColor(Color.WHITE);
                         break;
 
                     case R.id.radio_button4:
-
-                        rb4.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.selected_option_d));
-                        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_b));
-                        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_c));
-                        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_option_a));
+                        rb4.setTextColor(Color.RED);
+                        rb2.setTextColor(Color.WHITE);
+                        rb3.setTextColor(Color.WHITE);
+                        rb1.setTextColor(Color.WHITE);
                         break;
 
                 }
@@ -295,7 +291,6 @@ public class QuizActivity extends AppCompatActivity {
                     throw new IllegalStateException("Unexpected value: " + currentQ.getAnswer());
             }
 
-            changeToIncorrectColor(rbSelected);
             wrongAns++;
             final String correctAnswer = (String) answer.getText();
             wrongDialog.showWrongDialog(correctAnswer,this);
@@ -306,11 +301,6 @@ public class QuizActivity extends AppCompatActivity {
 
         if (questionCounter == questionTotalCount)
             buttonNext.setText("Confirm and Finish");
-    }
-
-    private void changeToIncorrectColor(RadioButton rbSelected) {
-        rbSelected.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_wrong));
-        rbSelected.setTextColor(Color.RED);
     }
 
 
