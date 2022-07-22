@@ -11,12 +11,12 @@ import android.widget.TextView;
 public class ResultActivity extends AppCompatActivity {
 
     TextView txtHighScore;
-    TextView txtTotalQuizQuestion,txtCorrectQuestion,txtWrongQuestion;
+    TextView txtTotalQuizQuestion, txtCorrectQuestion, txtWrongQuestion;
     Button btMainMenu;
     int highScore =0;
-    private static final String SHRED_PREFERENCE = "shared_preference";
-    private static final String SHRED_PREFERENCE_HIGH_SCORE = "shared_preference_high_score";
-    private long backPressedTime;
+    private String category;
+    private static final String SHARED_PREFERENCE = "shared_preference";
+    private static final String SHARED_PREFERENCE_HIGH_SCORE = "shared_preference_high_score_";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,7 @@ public class ResultActivity extends AppCompatActivity {
         loadHighScore();
 
         Intent intent = getIntent();
+        category  = intent.getStringExtra("Category");
         int score = intent.getIntExtra("UserScore",0);
         int totalQuestion = intent.getIntExtra("TotalQuizQuestions",0);
         int correctQuestions = intent.getIntExtra("CorrectQuestions",0);
@@ -54,6 +55,10 @@ public class ResultActivity extends AppCompatActivity {
         if (score > highScore){
             updateScore(score);
         }
+        else
+        {
+            txtHighScore.setText(txtHighScore.getText().toString() + String.valueOf(highScore));
+        }
     }
 
     private void updateScore(int score) {
@@ -62,20 +67,22 @@ public class ResultActivity extends AppCompatActivity {
 
         txtHighScore.setText(txtHighScore.getText().toString() + String.valueOf(highScore));
 
-        SharedPreferences sharedPreferences = getSharedPreferences(SHRED_PREFERENCE,MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCE,MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(SHRED_PREFERENCE_HIGH_SCORE,highScore);
+        editor.putInt(SHARED_PREFERENCE_HIGH_SCORE + category, highScore);
         editor.apply();
-
-
     }
 
     private void loadHighScore() {
 
-        SharedPreferences sharedPreferences = getSharedPreferences(SHRED_PREFERENCE,MODE_PRIVATE);
-        highScore = sharedPreferences.getInt(SHRED_PREFERENCE_HIGH_SCORE,0);
-        txtHighScore.setText(txtHighScore.getText().toString() + String.valueOf(highScore));
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
+        highScore = sharedPreferences.getInt(SHARED_PREFERENCE_HIGH_SCORE + category,0);
+    }
 
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(ResultActivity.this, CategoryActivity.class));
     }
 
 }

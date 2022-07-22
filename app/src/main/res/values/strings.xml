@@ -58,5 +58,10 @@
     <string name="select_answer">Please select an Answer</string>
     <string name="question_txt">Question</string>
     <string name="the_correct_answer_is">Correct Answer: </string>
+    <string name="global_sport"> sport</string>
+    <string name="global_music"> music</string>
+    <string name="global_animals"> animals</string>
+    <string name="global_movies"> movies</string>
+    <string name="global_food"> food</string>
 
 </resources>
