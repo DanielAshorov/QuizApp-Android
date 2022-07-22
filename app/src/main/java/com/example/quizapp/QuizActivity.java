@@ -104,8 +104,8 @@ public class QuizActivity extends AppCompatActivity {
         textViewCountDownTimer = findViewById(R.id.txtTimer);
         textViewScore = findViewById(R.id.txtScore);
         textViewQuestionCount = findViewById(R.id.txtTotalQuestion);
-        txtQuestion = findViewById(R.id.txtQuetsionContainer);
-        rbGroup = findViewById(R.id.raido_group);
+        txtQuestion = findViewById(R.id.text_question);
+        rbGroup = findViewById(R.id.radio_group_container);
         rb1 = findViewById(R.id.radio_button1);
         rb2 = findViewById(R.id.radio_button2);
         rb3 = findViewById(R.id.radio_button3);
@@ -125,6 +125,10 @@ public class QuizActivity extends AppCompatActivity {
     public void setQuestionView(){
 
         rbGroup.clearCheck();
+        rb1.setBackgroundResource(R.drawable.round);
+        rb2.setBackgroundResource(R.drawable.round);
+        rb3.setBackgroundResource(R.drawable.round);
+        rb4.setBackgroundResource(R.drawable.round);
         rb1.setTextColor(Color.WHITE);
         rb2.setTextColor(Color.WHITE);
         rb3.setTextColor(Color.WHITE);
@@ -180,6 +184,11 @@ public class QuizActivity extends AppCompatActivity {
                     case R.id.radio_button1:
                         //button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
+                        rb1.setBackgroundResource(R.drawable.round);
+                        rb2.setBackgroundResource(R.drawable.round);
+                        rb3.setBackgroundResource(R.drawable.round);
+                        rb4.setBackgroundResource(R.drawable.round);
+
                         rb1.setTextColor(Color.RED);
                         rb2.setTextColor(Color.WHITE);
                         rb3.setTextColor(Color.WHITE);
@@ -187,6 +196,11 @@ public class QuizActivity extends AppCompatActivity {
                         break;
 
                     case R.id.radio_button2:
+
+                        rb1.setBackgroundResource(R.drawable.round);
+                        rb2.setBackgroundResource(R.drawable.round);
+                        rb3.setBackgroundResource(R.drawable.round);
+                        rb4.setBackgroundResource(R.drawable.round);
 
                         rb2.setTextColor(Color.RED);
                         rb1.setTextColor(Color.WHITE);
@@ -196,6 +210,11 @@ public class QuizActivity extends AppCompatActivity {
 
                     case R.id.radio_button3:
 
+                        rb1.setBackgroundResource(R.drawable.round);
+                        rb2.setBackgroundResource(R.drawable.round);
+                        rb3.setBackgroundResource(R.drawable.round);
+                        rb4.setBackgroundResource(R.drawable.round);
+
                         rb3.setTextColor(Color.RED);
                         rb2.setTextColor(Color.WHITE);
                         rb1.setTextColor(Color.WHITE);
@@ -203,6 +222,11 @@ public class QuizActivity extends AppCompatActivity {
                         break;
 
                     case R.id.radio_button4:
+                        rb1.setBackgroundResource(R.drawable.round);
+                        rb2.setBackgroundResource(R.drawable.round);
+                        rb3.setBackgroundResource(R.drawable.round);
+                        rb4.setBackgroundResource(R.drawable.round);
+
                         rb4.setTextColor(Color.RED);
                         rb2.setTextColor(Color.WHITE);
                         rb3.setTextColor(Color.WHITE);

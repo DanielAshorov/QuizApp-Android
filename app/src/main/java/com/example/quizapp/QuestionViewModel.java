@@ -14,7 +14,7 @@ public class QuestionViewModel  extends AndroidViewModel {
 
     public QuestionViewModel(Application application){
 
-        super(application);//callback
+        super(application);
         String language = application.getString(R.string.language);
         mRepository = new QuestionRepository(application, language);
     }

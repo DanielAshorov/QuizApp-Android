@@ -8,7 +8,7 @@ import androidx.room.Query;
 import java.util.List;
 
 @Dao
-public interface QuestionDao {
+public interface QDao {
 
     @Query("SELECT * from questions_table WHERE category = :category and language = :language")
     LiveData<List<Questions>> getQuestionsByCategory(String category, String language);
