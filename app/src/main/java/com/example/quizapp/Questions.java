@@ -37,7 +37,7 @@ public class Questions {
     @ColumnInfo(name = "language")
     private String language;
     @Ignore
-    public Questions( String question, String optA, String optB, String optC, String optD, int answer,String category, String language) {
+    public Questions( String question, String optA, String optB, String optC, String optD, int answer, String category, String language) {
         this.question = question;
         this.optA = optA;
         this.optB = optB;
@@ -49,14 +49,12 @@ public class Questions {
     }
 
     Questions() {
-       // this.id = id;
         this.question = question;
         this.optA = optA;
         this.optB = optB;
         this.optC = optC;
         this.optD = "";
-      //  this.answer = answer;
-       this.category = "";
+        this.category = "";
     }
 
 
