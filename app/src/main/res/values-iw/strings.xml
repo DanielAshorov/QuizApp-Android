@@ -39,10 +39,11 @@
     <string name = "button_Next">מאשר </string>
     <string name = "txt_result_title">תוצאות של הטריוויה </string>
     <string name = "result_tv_HighScore">ניקוד שיא:  </string>
+    <string name = "result_your_score">הניקוד שלך: </string>
     <string name = "result_tv_Num_of_Ques">סה"כ שאלות: </string>
-    <string name = "result_tv_correct_Ques">סה"כ תשובות נכונות:   </string>
-    <string name = "result_tv_wrong_Ques">סה"כ תשובות לא נכונות:  </string>
-    <string name = "bt_result_main_menu">שחק שוב:  </string>
+    <string name = "result_tv_correct_Ques">תשובות נכונות:   </string>
+    <string name = "result_tv_wrong_Ques">תשובות לא נכונות:  </string>
+    <string name = "bt_result_main_menu">שחק שוב  </string>
     <string name = "txt_correct_dialog">נכון  </string>
     <string name = "textView_Score">ניקוד:  </string>
     <string name = "txt_correct_dialog_ok"> אוקי  </string>
@@ -58,5 +59,14 @@
     <string name="select_answer">אנא בחר תשובה</string>
     <string name="question_txt">שאלה</string>
     <string name="the_correct_answer_is">התשובה הנכונה: </string>
+    <string name="global_sport"> sport</string>
+    <string name="global_music"> music</string>
+    <string name="global_animals"> animals</string>
+    <string name="global_movies"> movies</string>
+    <string name="global_food"> food</string>
+
+
+
+
 
 </resources>

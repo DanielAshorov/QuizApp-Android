@@ -38,7 +38,8 @@
     <string name="txtScore">Score: </string>
     <string name="button_Next">Confirm</string>
     <string name="txt_result_title">Result of your quiz </string>
-    <string name="result_tv_HighScore">Best Score:  </string>
+    <string name="result_tv_HighScore">High Score:  </string>
+    <string name="result_your_score">Your Score: </string>
     <string name="result_tv_Num_of_Ques">Total Questions:  </string>
     <string name="result_tv_correct_Ques">Correct Answers:  </string>
     <string name="result_tv_wrong_Ques">Wrong Answers:  </string>
@@ -58,5 +59,10 @@
     <string name="select_answer">Please select an Answer</string>
     <string name="question_txt">Question</string>
     <string name="the_correct_answer_is">Correct Answer: </string>
+    <string name="global_sport"> sport</string>
+    <string name="global_music"> music</string>
+    <string name="global_animals"> animals</string>
+    <string name="global_movies"> movies</string>
+    <string name="global_food"> food</string>
 
 </resources>

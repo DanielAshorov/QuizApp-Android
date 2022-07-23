@@ -38,6 +38,7 @@ public class CategoryActivity extends AppCompatActivity  implements View.OnClick
                 catSport.setBackgroundColor(Color.rgb(45, 159, 148));
                 Intent intentSport = new Intent(CategoryActivity.this,QuizActivity.class);
                 intentSport.putExtra("Category", catSport.getText().toString());
+                intentSport.putExtra("GlobalCategory", getString(R.string.global_sport));
                 startActivity(intentSport);
                 break;
 
@@ -45,28 +46,32 @@ public class CategoryActivity extends AppCompatActivity  implements View.OnClick
                 catMusic.setBackgroundColor(Color.rgb(45, 159, 148));
                 Intent intentMusic = new Intent(CategoryActivity.this,QuizActivity.class);
                 intentMusic.putExtra("Category", catMusic.getText().toString());
+                intentMusic.putExtra("GlobalCategory", getString(R.string.global_music));
                 startActivity(intentMusic);
                 break;
 
             case R.id.cat_Food:
                 catFood.setBackgroundColor(Color.rgb(45, 159, 148));
-                Intent intentScience = new Intent(CategoryActivity.this,QuizActivity.class);
-                intentScience.putExtra("Category", catFood.getText().toString());
-                startActivity(intentScience);
+                Intent intentFood = new Intent(CategoryActivity.this,QuizActivity.class);
+                intentFood.putExtra("Category", catFood.getText().toString());
+                intentFood.putExtra("GlobalCategory", getString(R.string.global_food));
+                startActivity(intentFood);
                 break;
 
             case R.id.cat_Movies:
                 catMovies.setBackgroundColor(Color.rgb(45, 159, 148));
                 Intent intentMovies = new Intent(CategoryActivity.this,QuizActivity.class);
                 intentMovies.putExtra("Category", catMovies.getText().toString());
+                intentMovies.putExtra("GlobalCategory", getString(R.string.global_movies));
                 startActivity(intentMovies);
                 break;
 
             case R.id.cat_Animals:
                 catAnimals.setBackgroundColor(Color.rgb(45, 159, 148));
-                Intent intentTechnology = new Intent(CategoryActivity.this,QuizActivity.class);
-                intentTechnology.putExtra("Category", catAnimals.getText().toString());
-                startActivity(intentTechnology);
+                Intent intentAnimals = new Intent(CategoryActivity.this,QuizActivity.class);
+                intentAnimals.putExtra("Category", catAnimals.getText().toString());
+                intentAnimals.putExtra("GlobalCategory", getString(R.string.global_animals));
+                startActivity(intentAnimals);
                 break;
         }
     }

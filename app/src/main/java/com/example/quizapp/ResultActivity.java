@@ -11,23 +11,33 @@ import android.widget.TextView;
 public class ResultActivity extends AppCompatActivity {
 
     TextView txtHighScore;
-    TextView txtTotalQuizQuestion,txtCorrectQuestion,txtWrongQuestion;
+    TextView txtTotalQuizQuestion, txtCorrectQuestion, txtWrongQuestion, txtYourScore;
     Button btMainMenu;
     int highScore =0;
-    private static final String SHRED_PREFERENCE = "shared_preference";
-    private static final String SHRED_PREFERENCE_HIGH_SCORE = "shared_preference_high_score";
-    private long backPressedTime;
+    private String category;
+    private static final String SHARED_PREFERENCE = "shared_preference";
+    private static final String SHARED_PREFERENCE_HIGH_SCORE = "shared_preference_high_score_";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+
+        txtYourScore = findViewById(R.id.result_tv_your_score);
         txtHighScore = findViewById(R.id.result_tv_HighScore);
         txtTotalQuizQuestion = findViewById(R.id.result_tv_Num_of_Ques);
         txtCorrectQuestion = findViewById(R.id.result_tv_correct_Ques);
         txtWrongQuestion = findViewById(R.id.result_tv_wrong_Ques);
         btMainMenu = findViewById(R.id.bt_result_main_menu);
+
+        Intent intent = getIntent();
+        int score = intent.getIntExtra("UserScore",0);
+        int totalQuestion = intent.getIntExtra("TotalQuizQuestions",0);
+        int correctQuestions = intent.getIntExtra("CorrectQuestions",0);
+        int wrongQuestion = intent.getIntExtra("WrongQuestions",0);
+        category  = intent.getStringExtra("Category");
+
         btMainMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,19 +50,18 @@ public class ResultActivity extends AppCompatActivity {
 
         loadHighScore();
 
-        Intent intent = getIntent();
-        int score = intent.getIntExtra("UserScore",0);
-        int totalQuestion = intent.getIntExtra("TotalQuizQuestions",0);
-        int correctQuestions = intent.getIntExtra("CorrectQuestions",0);
-        int wrongQuestion = intent.getIntExtra("WrongQuestions",0);
-
-        txtTotalQuizQuestion.setText(txtTotalQuizQuestion.getText().toString() + String.valueOf(totalQuestion));
-        txtCorrectQuestion.setText(txtCorrectQuestion.getText().toString()  + String.valueOf(correctQuestions));
-        txtWrongQuestion.setText(txtWrongQuestion.getText().toString() + String.valueOf(wrongQuestion));
-
+        txtYourScore.setText(txtYourScore.getText().toString() +  " " + String.valueOf(score));
+        txtTotalQuizQuestion.setText(txtTotalQuizQuestion.getText().toString() + " " +String.valueOf(totalQuestion));
+        txtCorrectQuestion.setText(txtCorrectQuestion.getText().toString()  +  " " +String.valueOf(correctQuestions));
+        txtWrongQuestion.setText(txtWrongQuestion.getText().toString() + " " + String.valueOf(wrongQuestion));
 
         if (score > highScore){
             updateScore(score);
+            /// add some event that tells the client he has the highest score.
+        }
+        else
+        {
+            txtHighScore.setText(txtHighScore.getText().toString() +  " " + String.valueOf(highScore));
         }
     }
 
@@ -60,22 +69,26 @@ public class ResultActivity extends AppCompatActivity {
 
         highScore = score;
 
-        txtHighScore.setText(txtHighScore.getText().toString() + String.valueOf(highScore));
+        txtHighScore.setText(txtHighScore.getText().toString() + " " + String.valueOf(highScore));
 
-        SharedPreferences sharedPreferences = getSharedPreferences(SHRED_PREFERENCE,MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCE,MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(SHRED_PREFERENCE_HIGH_SCORE,highScore);
+        String key = SHARED_PREFERENCE_HIGH_SCORE + category;
+        editor.putInt( key, highScore);
         editor.apply();
-
-
     }
 
     private void loadHighScore() {
 
-        SharedPreferences sharedPreferences = getSharedPreferences(SHRED_PREFERENCE,MODE_PRIVATE);
-        highScore = sharedPreferences.getInt(SHRED_PREFERENCE_HIGH_SCORE,0);
-        txtHighScore.setText(txtHighScore.getText().toString() + String.valueOf(highScore));
+        String key =SHARED_PREFERENCE_HIGH_SCORE + category;
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
+        highScore = sharedPreferences.getInt(key,0);
+    }
 
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(ResultActivity.this, CategoryActivity.class));
     }
 
 }

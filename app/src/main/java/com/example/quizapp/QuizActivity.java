@@ -52,7 +52,8 @@ public class QuizActivity extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis;
     private long backPressedTime;
-    private String CategoryValue ="";
+    private String CategoryValue;
+    private String globalCategory;
 
     public QuizActivity() {
     }
@@ -74,6 +75,7 @@ public class QuizActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         CategoryValue = intent.getStringExtra("Category");
+        globalCategory = intent.getStringExtra("GlobalCategory");
 
         String language = getString(R.string.language);
         Log.d("TRIVIA", "onCreate: before viewModel");
@@ -103,6 +105,7 @@ public class QuizActivity extends AppCompatActivity {
         scoreText = getString(R.string.txtScore);
         textViewCountDownTimer = findViewById(R.id.txtTimer);
         textViewScore = findViewById(R.id.txtScore);
+        textViewScore.setText(textViewScore.getText().toString() + " " + String.valueOf(score));
         textViewQuestionCount = findViewById(R.id.txtTotalQuestion);
         txtQuestion = findViewById(R.id.text_question);
         rbGroup = findViewById(R.id.radio_group_container);
@@ -165,7 +168,7 @@ public class QuizActivity extends AppCompatActivity {
                 public void run() {
                     resultData();
                 }
-            },2000);
+            },1000);
         }
     }
 
@@ -182,8 +185,6 @@ public class QuizActivity extends AppCompatActivity {
                 switch (checkedId){
 
                     case R.id.radio_button1:
-                        //button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-
                         rb1.setBackgroundResource(R.drawable.round);
                         rb2.setBackgroundResource(R.drawable.round);
                         rb3.setBackgroundResource(R.drawable.round);
@@ -287,7 +288,7 @@ public class QuizActivity extends AppCompatActivity {
         {
             correctAns++;
             score +=10;
-            textViewScore.setText(scoreText + String.valueOf(score));
+            textViewScore.setText(scoreText + " " + String.valueOf(score));
             rbSelected.setTextColor(Color.GREEN);
             correctDialog.correctDialog(score,this);
             FLAG = 1;
@@ -386,19 +387,18 @@ public class QuizActivity extends AppCompatActivity {
             countDownTimer.cancel();
         }
 
-        Log.i("DATATA","onDestroy in QuizActivity");
-
+        Log.i("DATA","onDestroy in QuizActivity");
     }
 
     private void resultData(){
         finish(); // close activity
         Intent QuizResult = new Intent(QuizActivity.this,ResultActivity.class);
+        QuizResult.putExtra("Category", globalCategory);
         QuizResult.putExtra("UserScore", score);
         QuizResult.putExtra("TotalQuizQuestions",(questionTotalCount -1));
         QuizResult.putExtra("CorrectQuestions",correctAns);
         QuizResult.putExtra("WrongQuestions",wrongAns);
         startActivity(QuizResult);
-
     }
 
     @Override
