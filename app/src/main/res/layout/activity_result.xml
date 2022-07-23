@@ -52,6 +52,18 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/result_tv_your_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="start"
+            android:text="@string/result_your_score"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/result_tv_Num_of_Ques"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -103,5 +115,4 @@
             android:textSize="30sp" />
 
     </LinearLayout>
-
 </LinearLayout>

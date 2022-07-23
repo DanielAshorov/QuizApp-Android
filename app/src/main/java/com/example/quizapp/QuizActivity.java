@@ -105,6 +105,7 @@ public class QuizActivity extends AppCompatActivity {
         scoreText = getString(R.string.txtScore);
         textViewCountDownTimer = findViewById(R.id.txtTimer);
         textViewScore = findViewById(R.id.txtScore);
+        textViewScore.setText(textViewScore.getText().toString() + " " + String.valueOf(score));
         textViewQuestionCount = findViewById(R.id.txtTotalQuestion);
         txtQuestion = findViewById(R.id.text_question);
         rbGroup = findViewById(R.id.radio_group_container);
@@ -287,7 +288,7 @@ public class QuizActivity extends AppCompatActivity {
         {
             correctAns++;
             score +=10;
-            textViewScore.setText(scoreText + String.valueOf(score));
+            textViewScore.setText(scoreText + " " + String.valueOf(score));
             rbSelected.setTextColor(Color.GREEN);
             correctDialog.correctDialog(score,this);
             FLAG = 1;
