@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.Activities;
 
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -18,6 +18,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.quizapp.BL.CorrectDialog;
+import com.example.quizapp.BL.PlayAudioForAnswers;
+import com.example.quizapp.BL.QuestionViewModel;
+import com.example.quizapp.BL.Questions;
+import com.example.quizapp.R;
+import com.example.quizapp.BL.TimerDialog;
+import com.example.quizapp.BL.WrongDialog;
 
 import java.util.Collections;
 import java.util.List;
@@ -45,7 +53,6 @@ public class QuizActivity extends AppCompatActivity {
     private TimerDialog timerDialog;
     private WrongDialog wrongDialog;
     private CorrectDialog correctDialog;
-    private int totalSizeofQuiz;
     private int FLAG = 0;
     private PlayAudioForAnswers playAudioForAnswers;
     private static final long COUNTDOWN_IN_MILLIS = 30000;
@@ -128,14 +135,7 @@ public class QuizActivity extends AppCompatActivity {
     public void setQuestionView(){
 
         rbGroup.clearCheck();
-        rb1.setBackgroundResource(R.drawable.round);
-        rb2.setBackgroundResource(R.drawable.round);
-        rb3.setBackgroundResource(R.drawable.round);
-        rb4.setBackgroundResource(R.drawable.round);
-        rb1.setTextColor(Color.WHITE);
-        rb2.setTextColor(Color.WHITE);
-        rb3.setTextColor(Color.WHITE);
-        rb4.setTextColor(Color.WHITE);
+
         questionTotalCount = quesList.size() + 1;
 
         if (questionCounter < questionTotalCount -1){
@@ -168,7 +168,7 @@ public class QuizActivity extends AppCompatActivity {
                 public void run() {
                     resultData();
                 }
-            },1000);
+            },100);
         }
     }
 
@@ -185,54 +185,38 @@ public class QuizActivity extends AppCompatActivity {
                 switch (checkedId){
 
                     case R.id.radio_button1:
-                        rb1.setBackgroundResource(R.drawable.round);
-                        rb2.setBackgroundResource(R.drawable.round);
-                        rb3.setBackgroundResource(R.drawable.round);
-                        rb4.setBackgroundResource(R.drawable.round);
-
-                        rb1.setTextColor(Color.RED);
-                        rb2.setTextColor(Color.WHITE);
-                        rb3.setTextColor(Color.WHITE);
-                        rb4.setTextColor(Color.WHITE);
+                        rb1.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.textactivityColor));
+                        rb2.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
+                        rb3.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
+                        rb4.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         break;
 
                     case R.id.radio_button2:
-
-                        rb1.setBackgroundResource(R.drawable.round);
-                        rb2.setBackgroundResource(R.drawable.round);
-                        rb3.setBackgroundResource(R.drawable.round);
-                        rb4.setBackgroundResource(R.drawable.round);
-
-                        rb2.setTextColor(Color.RED);
-                        rb1.setTextColor(Color.WHITE);
-                        rb3.setTextColor(Color.WHITE);
-                        rb4.setTextColor(Color.WHITE);
+                        rb1.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
+                        rb2.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.textactivityColor));
+                        rb3.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
+                        rb4.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         break;
 
                     case R.id.radio_button3:
-
-                        rb1.setBackgroundResource(R.drawable.round);
-                        rb2.setBackgroundResource(R.drawable.round);
-                        rb3.setBackgroundResource(R.drawable.round);
-                        rb4.setBackgroundResource(R.drawable.round);
-
-                        rb3.setTextColor(Color.RED);
-                        rb2.setTextColor(Color.WHITE);
-                        rb1.setTextColor(Color.WHITE);
-                        rb4.setTextColor(Color.WHITE);
+                        rb1.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
+                        rb2.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
+                        rb3.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.textactivityColor));
+                        rb4.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         break;
 
                     case R.id.radio_button4:
-                        rb1.setBackgroundResource(R.drawable.round);
-                        rb2.setBackgroundResource(R.drawable.round);
-                        rb3.setBackgroundResource(R.drawable.round);
-                        rb4.setBackgroundResource(R.drawable.round);
-
-                        rb4.setTextColor(Color.RED);
-                        rb2.setTextColor(Color.WHITE);
-                        rb3.setTextColor(Color.WHITE);
-                        rb1.setTextColor(Color.WHITE);
+                        rb1.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
+                        rb2.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
+                        rb3.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
+                        rb4.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.textactivityColor));
                         break;
+
+                    default:
+                        rb1.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
+                        rb2.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
+                        rb3.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
+                        rb4.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
 
                 }
             }
@@ -279,7 +263,6 @@ public class QuizActivity extends AppCompatActivity {
         RadioButton rbSelected =  findViewById(rbGroup.getCheckedRadioButtonId());
         int answerNr = rbGroup.indexOfChild(rbSelected) +1;
         checkSolution(answerNr,rbSelected);
-
     }
 
     private void checkSolution(int answerNr, RadioButton rbSelected) {
@@ -289,7 +272,6 @@ public class QuizActivity extends AppCompatActivity {
             correctAns++;
             score +=10;
             textViewScore.setText(scoreText + " " + String.valueOf(score));
-            rbSelected.setTextColor(Color.GREEN);
             correctDialog.correctDialog(score,this);
             FLAG = 1;
         }
@@ -320,7 +302,9 @@ public class QuizActivity extends AppCompatActivity {
             FLAG = 2;
         }
 
-        playAudioForAnswers.setAudioforAnswers(FLAG);
+        playAudioForAnswers.setAudioForAnswers(FLAG);
+
+        rbGroup.clearCheck();
 
         if (questionCounter == questionTotalCount)
             buttonNext.setText("Confirm and Finish");
@@ -358,7 +342,7 @@ public class QuizActivity extends AppCompatActivity {
 
             textViewCountDownTimer.setTextColor(Color.RED);
             FLAG = 3;
-            playAudioForAnswers.setAudioforAnswers(FLAG);
+            playAudioForAnswers.setAudioForAnswers(FLAG);
 
         }else {
             textViewCountDownTimer.setTextColor(ContextCompat.getColor(this,R.color.timerFontColor));
@@ -392,7 +376,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private void resultData(){
         finish(); // close activity
-        Intent QuizResult = new Intent(QuizActivity.this,ResultActivity.class);
+        Intent QuizResult = new Intent(QuizActivity.this, ResultActivity.class);
         QuizResult.putExtra("Category", globalCategory);
         QuizResult.putExtra("UserScore", score);
         QuizResult.putExtra("TotalQuizQuestions",(questionTotalCount -1));

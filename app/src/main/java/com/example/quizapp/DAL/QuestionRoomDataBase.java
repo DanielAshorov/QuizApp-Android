@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.DAL;
 
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.room.Database;
@@ -9,17 +9,19 @@ import android.os.AsyncTask;
 import androidx.annotation.NonNull;
 import android.util.Log;
 
-@Database(entities = {Questions.class},version = 8)
-abstract class QuestionRoomDatabase extends RoomDatabase {
+import com.example.quizapp.BL.Questions;
 
-    private static QuestionRoomDatabase INSTANCE;
+@Database(entities = {Questions.class},version = 8,  exportSchema = false)
+public abstract class QuestionRoomDataBase extends RoomDatabase {
+
+    private static QuestionRoomDataBase INSTANCE;
     public abstract QDao questionDao();
 
-    public static synchronized QuestionRoomDatabase getInstance(final Context context) {
+    public static synchronized QuestionRoomDataBase getInstance(final Context context) {
 
         if (INSTANCE == null) {
             INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                    QuestionRoomDatabase.class, "questions_database")
+                    QuestionRoomDataBase.class, "questions_database")
                     .fallbackToDestructiveMigration()
                     .addCallback(RoomDBCallback)
                     .build();
@@ -47,7 +49,7 @@ abstract class QuestionRoomDatabase extends RoomDatabase {
         private QDao qDao;
 
 
-        private PopulateDbAsyncTask(QuestionRoomDatabase db) {
+        private PopulateDbAsyncTask(QuestionRoomDataBase db) {
 
             qDao = db.questionDao();
 

@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.Activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -11,14 +11,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.quizapp.model.UserDetails;
+import com.example.quizapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -89,20 +86,8 @@ public class LoginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
-                        final UserDetails[] data = new UserDetails[1];
-                        FirebaseFirestore db = FirebaseFirestore.getInstance();
-                        db.collection("Users").document(email).get().
-                                addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                                    @Override
-                                    public void onSuccess(DocumentSnapshot documentSnapshot) {
-                                        data[0] = documentSnapshot.toObject(UserDetails.class);
-
-                                        progressDialog.cancel();
-                                        Intent main = new Intent(LoginActivity.this,  CategoryActivity.class);
-                                        main.putExtra("userDetails", data[0]);
-                                        startActivity(main);
-                                    }
-                                });
+                    progressDialog.cancel();
+                    startActivity(new Intent(LoginActivity.this,  CategoryActivity.class));
                     }
                     else
                     {

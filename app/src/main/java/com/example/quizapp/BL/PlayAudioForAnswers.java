@@ -1,7 +1,9 @@
-package com.example.quizapp;
+package com.example.quizapp.BL;
 
 import android.content.Context;
 import android.media.MediaPlayer;
+
+import com.example.quizapp.R;
 
 public class PlayAudioForAnswers {
 
@@ -15,7 +17,7 @@ public class PlayAudioForAnswers {
     }
 
 
-    public void setAudioforAnswers(final int flag){
+    public void setAudioForAnswers(final int flag){
 
         switch (flag){
 

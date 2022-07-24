@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.BL;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -8,12 +8,15 @@ import android.graphics.drawable.ColorDrawable;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.quizapp.Activities.CategoryActivity;
+import com.example.quizapp.R;
+
 public class TimerDialog {
 
     private Context mContext;
     private Dialog timerDialog;
 
-    TimerDialog(Context mContext) {
+    public TimerDialog(Context mContext) {
         this.mContext = mContext;
     }
 
@@ -22,10 +25,10 @@ public class TimerDialog {
         timerDialog = new Dialog(mContext);
 
         timerDialog.setContentView(R.layout.timer_dialog);
-        final Button bttimerDialog = (Button) timerDialog.findViewById(R.id.bt_timerDialog);
+        final Button btTimerDialog = (Button) timerDialog.findViewById(R.id.bt_timerDialog);
 
 
-        bttimerDialog.setOnClickListener(new View.OnClickListener() {
+        btTimerDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.BL;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -8,11 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.quizapp.Activities.QuizActivity;
+import com.example.quizapp.R;
+
 public class CorrectDialog {
     private Context mContext;
     private Dialog correctDialog;
 
-    private QuizActivity mquizActivity;
+    private QuizActivity mQuizActivity;
 
     public CorrectDialog(Context mContext) {
         this.mContext = mContext;
@@ -20,7 +23,7 @@ public class CorrectDialog {
 
     public void correctDialog(int score,QuizActivity quizActivity){
 
-        mquizActivity = quizActivity;
+        mQuizActivity = quizActivity;
 
 
         correctDialog = new Dialog(mContext);
@@ -35,7 +38,7 @@ public class CorrectDialog {
             public void onClick(View v) {
 
                 correctDialog.dismiss();
-                mquizActivity.setQuestionView();
+                mQuizActivity.setQuestionView();
 
             }
         });
@@ -48,7 +51,7 @@ public class CorrectDialog {
 
     private void Score(int score) {
 
-        TextView textScore = (TextView) correctDialog.findViewById(R.id.textView_Score);
+        TextView textScore = correctDialog.findViewById(R.id.textView_Score);
         textScore.setText("Score: " + String.valueOf(score));
     }
 

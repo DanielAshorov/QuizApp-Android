@@ -18,5 +18,6 @@
     <color name="button_text_color">#0D9B7B</color>
     <color name="opening_card_color">#1B213A</color>
     <color name="opening_tint_color">#539256</color>
+    <color name="questionPink">#ab2fb7</color>
 
 </resources>

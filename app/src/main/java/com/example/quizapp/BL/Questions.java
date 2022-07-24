@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.BL;
 
 
 import androidx.room.ColumnInfo;
@@ -48,7 +48,7 @@ public class Questions {
         this.language = language;
     }
 
-    Questions() {
+    public Questions() {
         this.question = question;
         this.optA = optA;
         this.optB = optB;
