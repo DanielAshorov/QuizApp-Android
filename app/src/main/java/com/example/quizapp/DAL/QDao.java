@@ -1,9 +1,11 @@
-package com.example.quizapp;
+package com.example.quizapp.DAL;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+
+import com.example.quizapp.BL.Questions;
 
 import java.util.List;
 

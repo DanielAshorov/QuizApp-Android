@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.Activities;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.quizapp.R;
 
 public class CategoryActivity extends AppCompatActivity  implements View.OnClickListener {
     Button catSport, catMusic, catFood, catMovies, catAnimals;
@@ -36,7 +38,7 @@ public class CategoryActivity extends AppCompatActivity  implements View.OnClick
 
             case R.id.cat_Sport:
                 catSport.setBackgroundColor(Color.rgb(45, 159, 148));
-                Intent intentSport = new Intent(CategoryActivity.this,QuizActivity.class);
+                Intent intentSport = new Intent(CategoryActivity.this, QuizActivity.class);
                 intentSport.putExtra("Category", catSport.getText().toString());
                 intentSport.putExtra("GlobalCategory", getString(R.string.global_sport));
                 startActivity(intentSport);

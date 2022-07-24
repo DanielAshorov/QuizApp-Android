@@ -1,7 +1,9 @@
-package com.example.quizapp;
+package com.example.quizapp.DAL;
 
 import android.app.Application;
 import androidx.lifecycle.LiveData;
+
+import com.example.quizapp.BL.Questions;
 
 import java.util.List;
 public class QuestionRepository {
@@ -12,7 +14,7 @@ public class QuestionRepository {
 
 
     public QuestionRepository(Application application, String language){
-        QuestionRoomDatabase db = QuestionRoomDatabase.getInstance(application);
+        QuestionRoomDataBase db = QuestionRoomDataBase.getInstance(application);
         mQDao = db.questionDao();
     }
 

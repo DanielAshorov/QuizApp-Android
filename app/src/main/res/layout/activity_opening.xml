@@ -8,7 +8,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="18dp"
-    tools:context=".OpeningActivity">
+    tools:context=".Activities.OpeningActivity">
 
 
     <ImageView

@@ -10,16 +10,16 @@
         android:theme="@style/Theme.QuizApp"
         tools:ignore="ExtraText">
         <activity
-            android:name=".CreateAccountActivity"
+            android:name=".Activities.CreateAccountActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activities.LoginActivity"
             android:exported="false" />
-        <activity android:name=".CategoryActivity" />
-        <activity android:name=".QuizActivity" />
-        <activity android:name=".ResultActivity" />
+        <activity android:name=".Activities.CategoryActivity" />
+        <activity android:name=".Activities.QuizActivity" />
+        <activity android:name=".Activities.ResultActivity" />
         <activity
-            android:name=".OpeningActivity"
+            android:name=".Activities.OpeningActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

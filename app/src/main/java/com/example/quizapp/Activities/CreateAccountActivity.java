@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,8 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.quizapp.helpers.UserHelper;
-import com.example.quizapp.model.UserDetails;
+import com.example.quizapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -23,7 +22,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class CreateAccountActivity extends AppCompatActivity {
     private Button createAcctButton;
     private FirebaseAuth firebaseAuth;
-    private FirebaseUser currentUser;
     private final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
     //Firestore connection
@@ -40,8 +38,6 @@ public class CreateAccountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_account);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        currentUser = firebaseAuth.getCurrentUser();
-
 
         createAcctButton = findViewById(R.id.create_acct_button);
         progressBar = findViewById(R.id.create_acct_progress);
@@ -84,12 +80,7 @@ public class CreateAccountActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
-                        UserHelper userHelper = new UserHelper();
-                        userHelper.setUserFirstTime(username, email);
-                        UserDetails data = new UserDetails(1,1,1,1,1,0,username);
-                        Intent main = new Intent(CreateAccountActivity.this,  CategoryActivity.class);
-                        main.putExtra("userDetails", data);
-                        startActivity(main);
+                        startActivity(new Intent(CreateAccountActivity.this,  CategoryActivity.class));
                         progressBar.setVisibility(View.INVISIBLE);
                     }
                     else{
