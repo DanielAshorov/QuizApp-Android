@@ -32,8 +32,8 @@
     <string name="bt_Sport">Sport</string>
     <string name="bt_Music">Music </string>
     <string name="bt_Movies">Movies</string>
-    <string name="bt_Science">Food</string>
-    <string name="bt_Technology">Animals</string>
+    <string name="bt_Food">Food</string>
+    <string name="bt_Animals">Animals</string>
     <string name="txtTotalQuestion">Question: 1/20</string>
     <string name="txtScore">Score: </string>
     <string name="button_Next">Confirm</string>

@@ -6,103 +6,119 @@
     android:background="#9126bd"
     tools:context=".Activities.ResultActivity">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:gravity="center_horizontal"
-        android:inputType="textPersonName"
-        android:text="@string/editTextTextPersonName"
-        android:textAlignment="center"
-        android:textColor="#ffff"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
 
 
-    <Button
-        android:id="@+id/cat_Sport"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="#7858A6"
-        android:padding="20dp"
-        android:text="@string/bt_Sport"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/cat_Music"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName" />
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:text="@string/editTextTextPersonName"
+                android:textAlignment="center"
+                android:textColor="#ffff"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/cat_Music"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="#AB46D2"
-        android:padding="20dp"
-        android:text="@string/bt_Music"
-        android:textAllCaps="false"
-        android:textColor="@color/dialogColor"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cat_Sport" />
 
-    <Button
-        android:id="@+id/cat_Movies"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="#ab2fb7"
-        android:padding="20dp"
-        android:text="@string/bt_Movies"
-        android:textAllCaps="false"
-        android:textColor="@color/dialogColor"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cat_Music" />
+            <Button
+                android:id="@+id/cat_Sport"
+                android:layout_width="526dp"
+                android:layout_height="235dp"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@drawable/sport_image"
+                android:padding="5dp"
+                android:text="@string/bt_Sport"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/cat_Music"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.535"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName" />
 
-    <Button
-        android:id="@+id/cat_Food"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="#937DC2"
-        android:padding="20dp"
-        android:text="@string/bt_Science"
-        android:textAllCaps="false"
-        android:textColor="@color/dialogColor"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cat_Movies" />
+            <Button
+                android:id="@+id/cat_Music"
+                android:layout_width="434dp"
+                android:layout_height="233dp"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@drawable/music_back"
+                android:padding="5dp"
+                android:text="@string/bt_Music"
+                android:textAllCaps="false"
+                android:textColor="@color/dialogColor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cat_Sport" />
 
-    <Button
-        android:id="@+id/cat_Animals"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="#A63EC5"
-        android:padding="20dp"
-        android:text="@string/bt_Technology"
-        android:textAllCaps="false"
-        android:textColor="@color/dialogColor"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cat_Food" />
+            <Button
+                android:id="@+id/cat_Movies"
+                android:layout_width="532dp"
+                android:layout_height="235dp"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@drawable/movies_image"
+                android:padding="5dp"
+                android:text="@string/bt_Movies"
+                android:textAllCaps="false"
+                android:textColor="@color/dialogColor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cat_Music" />
+
+            <Button
+                android:id="@+id/cat_Food"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@drawable/food_image"
+                android:padding="5dp"
+                android:text="@string/bt_Food"
+                android:textAllCaps="false"
+                android:textColor="@color/dialogColor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cat_Movies" />
+
+            <Button
+                android:id="@+id/cat_Animals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@drawable/animals_image"
+                android:padding="5dp"
+                android:text="@string/bt_Animals"
+                android:textAllCaps="false"
+                android:textColor="@color/dialogColor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cat_Food" />
+
+        </TableLayout>
+    </ScrollView>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
