@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
+import com.example.quizapp.BL.QuestionViewModel;
 import com.example.quizapp.R;
 
 public class OpeningActivity extends AppCompatActivity {
@@ -17,7 +19,7 @@ public class OpeningActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening);
         getStartedButton = findViewById(R.id.startButton);
-
+        QuestionViewModel view = new ViewModelProvider(this).get(QuestionViewModel.class);
         getStartedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

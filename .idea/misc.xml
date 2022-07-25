@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/Desktop/Android/QuizApp-Android/app/src/main/res/drawable/heart.xml" value="0.1555" />
+        <entry key="..\:/Users/User/Desktop/Android/QuizApp-Android/app/src/main/res/layout/activity_category.xml" value="0.22" />
+        <entry key="..\:/Users/User/Desktop/Android/QuizApp-Android/app/src/main/res/layout/activity_new_high_score.xml" value="0.1890625" />
         <entry key="..\:/Users/danni/Desktop/Quiz/QuizApp-master/app/src/main/res/font/roboto_medium.xml" value="0.13518518518518519" />
         <entry key="..\:/Users/danni/Desktop/Quiz/QuizApp-master/app/src/main/res/layout/activity_category.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/danni/Desktop/Quiz/QuizApp-master/app/src/main/res/layout/activity_create_account.xml" value="0.14130434782608695" />
