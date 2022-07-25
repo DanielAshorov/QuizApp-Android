@@ -3,8 +3,8 @@
     android:orientation="vertical"
     android:layout_width="300dp"
     android:layout_gravity="center"
-    android:background="#4CAF50"
-    android:layout_height="250dp">
+    android:background="@color/purple_500"
+    android:layout_height="275dp">
 
 
     <TextView
@@ -14,7 +14,7 @@
         android:padding="5dp"
         android:layout_marginTop="10dp"
         android:textStyle="bold"
-        android:textColor="@color/RBColor"
+        android:textColor="@color/black"
         android:layout_gravity="center"
         android:textSize="35sp"
         />
@@ -29,7 +29,7 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
         android:textStyle="bold"
-        android:textColor="@color/RBColor"
+        android:textColor="@color/black"
         android:layout_gravity="center"
         android:textSize="30sp"
         android:layout_marginTop="50dp"
@@ -43,9 +43,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/txt_correct_dialog_ok"
+        android:backgroundTint="#ab2fb7"
         android:textStyle="bold"
-        android:textColor="@color/RBColor"
+        android:textColor="@color/black"
         android:textSize="35sp"
-        android:background="@drawable/dialog_bt_bg"
         />
 </LinearLayout>

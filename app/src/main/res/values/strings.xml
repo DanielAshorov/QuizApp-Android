@@ -44,11 +44,11 @@
     <string name="result_tv_correct_Ques">Correct Answers:  </string>
     <string name="result_tv_wrong_Ques">Wrong Answers:  </string>
     <string name="bt_result_main_menu">Play again  </string>
-    <string name="txt_correct_dialog">Correct  </string>
+    <string name="txt_correct_dialog">Correct Answer! </string>
     <string name="textView_Score">Score: </string>
     <string name="txt_correct_dialog_ok">OK  </string>
-    <string name="txt_wrong_dialog">Wrong  </string>
-    <string name="textView_Correct_Answer">Final Score:  </string>
+    <string name="txt_wrong_dialog">Wrong Answer! </string>
+    <string name="textView_Correct_Answer">Final score of Quiz:  </string>
     <string name="txt_wrong_dialog_ok">OK  </string>
     <string name="txt_finalScore">Final Score  </string>
     <string name="bt_finalScore_ok">OK  </string>

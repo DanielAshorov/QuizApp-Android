@@ -1,5 +1,6 @@
 package com.example.quizapp.Activities;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,8 +45,9 @@ public class ResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Bundle b = ActivityOptions.makeSceneTransitionAnimation(ResultActivity.this).toBundle();
                 Intent intent = new Intent(ResultActivity.this, CategoryActivity.class);
-                startActivity(intent);
+                startActivity(intent, b);
 
             }
         });
@@ -61,6 +63,9 @@ public class ResultActivity extends AppCompatActivity {
             updateScore(score);
             Intent newHighScoreIntent = new Intent(ResultActivity.this, NewHighScore.class);
             newHighScoreIntent.putExtra("newHighScore", score);
+            Bundle b = ActivityOptions.makeSceneTransitionAnimation(ResultActivity.this).toBundle();
+            startActivity(newHighScoreIntent, b);
+
             startActivity(newHighScoreIntent);
             /// add some event that tells the client he has the highest score.
         }
@@ -93,7 +98,9 @@ public class ResultActivity extends AppCompatActivity {
     @Override
     public void onBackPressed()
     {
-        startActivity(new Intent(ResultActivity.this, CategoryActivity.class));
+        Bundle b = ActivityOptions.makeSceneTransitionAnimation(ResultActivity.this).toBundle();
+        Intent i = new Intent(ResultActivity.this, CategoryActivity.class);
+        startActivity(i, b);
     }
 
 }

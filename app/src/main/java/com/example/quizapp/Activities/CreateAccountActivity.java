@@ -1,5 +1,6 @@
 package com.example.quizapp.Activities;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -80,7 +81,10 @@ public class CreateAccountActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
-                        startActivity(new Intent(CreateAccountActivity.this,  CategoryActivity.class));
+                        Bundle b = ActivityOptions.makeSceneTransitionAnimation(CreateAccountActivity.this).toBundle();
+                        Intent i = new Intent(CreateAccountActivity.this, CategoryActivity.class);
+                        startActivity(i, b);
+
                         progressBar.setVisibility(View.INVISIBLE);
                     }
                     else{
@@ -90,7 +94,6 @@ public class CreateAccountActivity extends AppCompatActivity {
                     }
                 }
             });
-
         }
     }
 }

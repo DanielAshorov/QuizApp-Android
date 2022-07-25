@@ -1,13 +1,13 @@
 package com.example.quizapp.Activities;
 
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.os.Handler;
-import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -372,13 +372,14 @@ public class QuizActivity extends AppCompatActivity {
 
     private void resultData(){
         finish(); // close activity
+        Bundle b = ActivityOptions.makeSceneTransitionAnimation(QuizActivity.this).toBundle();
         Intent QuizResult = new Intent(QuizActivity.this, ResultActivity.class);
         QuizResult.putExtra("Category", globalCategory);
         QuizResult.putExtra("UserScore", score);
         QuizResult.putExtra("TotalQuizQuestions",(questionTotalCount -1));
         QuizResult.putExtra("CorrectQuestions",correctAns);
         QuizResult.putExtra("WrongQuestions",wrongAns);
-        startActivity(QuizResult);
+        startActivity(QuizResult, b);
     }
 
     @Override
@@ -393,7 +394,10 @@ public class QuizActivity extends AppCompatActivity {
     {
         if (backPressedTime + 2000 > System.currentTimeMillis()) {
             toast.cancel();
-            startActivity(new Intent(QuizActivity.this, CategoryActivity.class));
+            Bundle n = ActivityOptions.makeSceneTransitionAnimation(QuizActivity.this).toBundle();
+            Intent i = new Intent(QuizActivity.this, CategoryActivity.class);
+            startActivity(i, n);
+
             return;
         }
         else {

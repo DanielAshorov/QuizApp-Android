@@ -1,5 +1,6 @@
 package com.example.quizapp.Activities;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,19 +38,19 @@ public class CategoryActivity extends AppCompatActivity  implements View.OnClick
         switch (view.getId()){
 
             case R.id.cat_Sport:
-                catSport.setBackgroundColor(Color.rgb(45, 159, 148));
                 Intent intentSport = new Intent(CategoryActivity.this, QuizActivity.class);
                 intentSport.putExtra("Category", catSport.getText().toString());
                 intentSport.putExtra("GlobalCategory", getString(R.string.global_sport));
-                startActivity(intentSport);
+                Bundle b = ActivityOptions.makeSceneTransitionAnimation(CategoryActivity.this).toBundle();
+                startActivity(intentSport, b);
                 break;
 
             case R.id.cat_Music:
-                catMusic.setBackgroundColor(Color.rgb(45, 159, 148));
                 Intent intentMusic = new Intent(CategoryActivity.this,QuizActivity.class);
                 intentMusic.putExtra("Category", catMusic.getText().toString());
                 intentMusic.putExtra("GlobalCategory", getString(R.string.global_music));
-                startActivity(intentMusic);
+                Bundle c = ActivityOptions.makeSceneTransitionAnimation(CategoryActivity.this).toBundle();
+                startActivity(intentMusic, c);
                 break;
 
             case R.id.cat_Food:
@@ -57,7 +58,8 @@ public class CategoryActivity extends AppCompatActivity  implements View.OnClick
                 Intent intentFood = new Intent(CategoryActivity.this,QuizActivity.class);
                 intentFood.putExtra("Category", catFood.getText().toString());
                 intentFood.putExtra("GlobalCategory", getString(R.string.global_food));
-                startActivity(intentFood);
+                Bundle d = ActivityOptions.makeSceneTransitionAnimation(CategoryActivity.this).toBundle();
+                startActivity(intentFood, d);
                 break;
 
             case R.id.cat_Movies:
@@ -65,7 +67,8 @@ public class CategoryActivity extends AppCompatActivity  implements View.OnClick
                 Intent intentMovies = new Intent(CategoryActivity.this,QuizActivity.class);
                 intentMovies.putExtra("Category", catMovies.getText().toString());
                 intentMovies.putExtra("GlobalCategory", getString(R.string.global_movies));
-                startActivity(intentMovies);
+                Bundle e = ActivityOptions.makeSceneTransitionAnimation(CategoryActivity.this).toBundle();
+                startActivity(intentMovies, e);
                 break;
 
             case R.id.cat_Animals:
@@ -73,7 +76,8 @@ public class CategoryActivity extends AppCompatActivity  implements View.OnClick
                 Intent intentAnimals = new Intent(CategoryActivity.this,QuizActivity.class);
                 intentAnimals.putExtra("Category", catAnimals.getText().toString());
                 intentAnimals.putExtra("GlobalCategory", getString(R.string.global_animals));
-                startActivity(intentAnimals);
+                Bundle f = ActivityOptions.makeSceneTransitionAnimation(CategoryActivity.this).toBundle();
+                startActivity(intentAnimals, f);
                 break;
         }
     }
@@ -82,5 +86,9 @@ public class CategoryActivity extends AppCompatActivity  implements View.OnClick
     public void onBackPressed()
     {
         startActivity(new Intent(CategoryActivity.this, OpeningActivity.class));
+        Bundle g = ActivityOptions.makeSceneTransitionAnimation(CategoryActivity.this).toBundle();
+        Intent i = new Intent(CategoryActivity.this, OpeningActivity.class);
+        startActivity(i, g);
+
     }
 }
