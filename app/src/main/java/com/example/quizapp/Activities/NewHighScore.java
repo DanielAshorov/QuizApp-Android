@@ -1,14 +1,13 @@
 package com.example.quizapp.Activities;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.example.quizapp.R;
-
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;

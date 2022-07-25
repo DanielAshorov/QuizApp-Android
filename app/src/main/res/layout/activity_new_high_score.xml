@@ -27,4 +27,16 @@
         android:gravity="center"
         android:layout_centerHorizontal="true"/>
 
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/bt_result_main_menu"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="@+id/konfettiView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/newHighScoreTextV" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
