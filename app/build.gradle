@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.quizapp"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 32
         versionCode 1
         versionName "1.0"
@@ -64,7 +64,7 @@ dependencies {
     annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.5.0'
 
     // CONFETTI
-    implementation 'nl.dionsegijn:konfetti-compose:2.0.2'
-    implementation 'nl.dionsegijn:konfetti-xml:2.0.2'
+    implementation 'nl.dionsegijn:konfetti-compose:2.0.1'
+    implementation 'nl.dionsegijn:konfetti-xml:2.0.1'
 
 }
