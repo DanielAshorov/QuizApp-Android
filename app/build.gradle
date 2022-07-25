@@ -63,4 +63,8 @@ dependencies {
     //noinspection LifecycleAnnotationProcessorWithJava8
     annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.5.0'
 
+    // CONFETTI
+    implementation 'nl.dionsegijn:konfetti-compose:2.0.2'
+    implementation 'nl.dionsegijn:konfetti-xml:2.0.2'
+
 }

@@ -59,6 +59,9 @@ public class ResultActivity extends AppCompatActivity {
 
         if (score > highScore){
             updateScore(score);
+            Intent newHighScoreIntent = new Intent(ResultActivity.this, NewHighScore.class);
+            newHighScoreIntent.putExtra("newHighScore", score);
+            startActivity(newHighScoreIntent);
             /// add some event that tells the client he has the highest score.
         }
         else

@@ -64,5 +64,6 @@
     <string name="global_animals"> animals</string>
     <string name="global_movies"> movies</string>
     <string name="global_food"> food</string>
+    <string name="newHighScore">Congrats you have reached a new high score: </string>
 
 </resources>
