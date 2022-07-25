@@ -89,18 +89,14 @@ public class QuizActivity extends AppCompatActivity {
         questionViewModel = new ViewModelProvider(this).get(QuestionViewModel.class);
         Log.d("TRIVIA", "onCreate: calling getAllQuestionByCategory with category=" + CategoryValue);
 
-        questionViewModel.getAllQuestionByCategory(CategoryValue, language).observe(this, new Observer<List<Questions>>() {
-            @Override
-            public void onChanged(@Nullable List<Questions> questions) {
-                //first time check the questions
-                if (questions == null || questions.size() == 0) {
-                    return;
-                }
-                Log.d("TRIVIA", "questions: " + questions.size());
-
-                fetchContent(questions);
-
+        questionViewModel.getAllQuestionByCategory(CategoryValue, language).observe(this, questions -> {
+            //first time check the questions
+            if (questions == null || questions.size() == 0) {
+                return;
             }
+            Log.d("TRIVIA", "questions: " + questions.size());
+            fetchContent(questions);
+
         });
         Log.i("DATA","onCreate() in QuizActivity");
     }
