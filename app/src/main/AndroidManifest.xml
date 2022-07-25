@@ -11,6 +11,9 @@
         android:theme="@style/Theme.QuizApp"
         tools:ignore="ExtraText">
         <activity
+            android:name=".CustomActivityAnimation"
+            android:exported="false" />
+        <activity
             android:name=".Activities.NewHighScore"
             android:exported="false" />
         <activity
