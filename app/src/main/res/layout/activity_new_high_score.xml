@@ -17,18 +17,19 @@
         android:id="@+id/newHighScoreTextV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-45dp"
         android:text="@string/newHighScore"
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/konfettiView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/konfettiView"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:gravity="center"
         android:layout_centerHorizontal="true"/>
 
     <Button
-        android:id="@+id/startButton"
+        android:id="@+id/playAgain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
@@ -36,6 +37,7 @@
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="@+id/konfettiView"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/newHighScoreTextV" />
 

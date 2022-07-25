@@ -1,5 +1,6 @@
 package com.example.quizapp.Activities;
 
+import android.app.ActivityOptions;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,7 +39,10 @@ public class LoginActivity extends AppCompatActivity {
         createAcctButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, CreateAccountActivity.class));
+                Bundle b = ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this).toBundle();
+                Intent i = new Intent(LoginActivity.this, CreateAccountActivity.class);
+                startActivity(i, b);
+
             }
         });
 
@@ -87,7 +91,9 @@ public class LoginActivity extends AppCompatActivity {
                     if(task.isSuccessful())
                     {
                     progressDialog.cancel();
-                    startActivity(new Intent(LoginActivity.this,  CategoryActivity.class));
+                        Bundle b = ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this).toBundle();
+                        Intent i = new Intent(LoginActivity.this, CategoryActivity.class);
+                        startActivity(i, b);
                     }
                     else
                     {
