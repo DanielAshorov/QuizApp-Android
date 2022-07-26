@@ -23,4 +23,12 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="ThemeWithCorners" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@drawable/round_dialog</item>
+    </style>
+
+    <style name="ThemeWithCornersWrongAnswer" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@drawable/round_dialog_wrong_answer</item>
+    </style>
 </resources>

@@ -33,7 +33,7 @@
     <string name = "bt_Music">מוזיקה </string>
     <string name = "bt_Movies">סרטים </string>
     <string name = "bt_Food">אוכל </string>
-    <string name = "bt_Animals">חיות</string>
+    <string name = "bt_Animals">חיות </string>
     <string name = "txtTotalQuestion">שאלות: </string>
     <string name = "txtScore">ציון: </string>
     <string name = "button_Next">מאשר </string>
@@ -46,15 +46,15 @@
     <string name = "bt_result_main_menu">שחק שוב  </string>
     <string name = "txt_correct_dialog">תשובה נכונה!  </string>
     <string name = "textView_Score">ניקוד:  </string>
-    <string name = "txt_correct_dialog_ok"> אוקי  </string>
+    <string name = "txt_correct_dialog_ok">המשך  </string>
     <string name = "txt_wrong_dialog"> תשובה לא נכונה!  </string>
     <string name = "textView_Correct_Answer">תוצאה סופית:  </string>
-    <string name = "txt_wrong_dialog_ok">אוקי  </string>
+    <string name = "txt_wrong_dialog_ok">המשך  </string>
     <string name = "txt_finalScore">תוצאה סופית של הטריויה  </string>
-    <string name = "bt_finalScore_ok">אוקי  </string>
+    <string name = "bt_finalScore_ok">המשך  </string>
     <string name = "txt_TimesUp">הזמן הסתיים, נסה שוב! </string>
     <string name = "txt_GameOver">המשחק נגמר  </string>
-    <string name = "bt_Times_ok">אוקי  </string>
+    <string name = "bt_Times_ok">שחק שוב  </string>
     <string name="double_back_bt_exit">לחץ שוב בשביל לצאת</string>
     <string name="select_answer">אנא בחר תשובה</string>
     <string name="question_txt">שאלה</string>
@@ -65,8 +65,6 @@
     <string name="global_movies"> movies</string>
     <string name="global_food"> food</string>
     <string name="newHighScore">מזל טוב הצלחת להגיע לשיא חדש:  </string>
-
-
-
+    <string name="high_score_main_menu">חזרה לתפריט </string>
 
 </resources>

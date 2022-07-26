@@ -30,7 +30,6 @@ public class CreateAccountActivity extends AppCompatActivity {
     private EditText emailEditText;
     private EditText passwordEditText;
     private ProgressBar progressBar;
-    private EditText userNameEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +42,6 @@ public class CreateAccountActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.create_acct_progress);
         emailEditText = findViewById(R.id.email_account);
         passwordEditText = findViewById(R.id.password_account);
-        userNameEditText = findViewById(R.id.username_account);
 
         createAcctButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,9 +55,8 @@ public class CreateAccountActivity extends AppCompatActivity {
     {
         String email = emailEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
-        String username = userNameEditText.getText().toString().trim();
 
-        if(username.isEmpty() || password.isEmpty() || email.isEmpty()) {
+        if(password.isEmpty() || email.isEmpty()) {
             String emptyField = getString(R.string.empty_fields);
             Toast.makeText(CreateAccountActivity.this, emptyField,
                     Toast.LENGTH_SHORT).show();
