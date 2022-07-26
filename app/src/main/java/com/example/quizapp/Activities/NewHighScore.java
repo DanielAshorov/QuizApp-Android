@@ -1,7 +1,10 @@
 package com.example.quizapp.Activities;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +26,7 @@ public class NewHighScore extends AppCompatActivity {
 
     private KonfettiView konfettiView = null;
     private Shape.DrawableShape drawableShape = null;
-
+    Button PlayAgain;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +34,21 @@ public class NewHighScore extends AppCompatActivity {
         Intent intent = getIntent();
         int newHighScore = intent.getIntExtra("newHighScore", 0);
         TextView highScoreText = findViewById(R.id.newHighScoreTextV);
+        PlayAgain = findViewById(R.id.playAgain);
         highScoreText.setText(highScoreText.getText() + " " + String.valueOf(newHighScore));
         konfettiView = findViewById(R.id.konfettiView);
         Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.heart);
         drawableShape = new Shape.DrawableShape(drawable, true);
+        PlayAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Bundle b = ActivityOptions.makeSceneTransitionAnimation(NewHighScore.this).toBundle();
+                Intent intent = new Intent(NewHighScore.this, CategoryActivity.class);
+                startActivity(intent, b);
+
+            }
+        });
         EmitterConfig emitterConfig = new Emitter(4000, TimeUnit.MILLISECONDS).max(100);
         konfettiView.start(
                 new PartyFactory(emitterConfig)
@@ -58,4 +72,6 @@ public class NewHighScore extends AppCompatActivity {
         finishAffinity();
         startActivity(new Intent(NewHighScore.this, CategoryActivity.class));
     }
+
+
 }

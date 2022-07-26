@@ -63,9 +63,9 @@ public abstract class QuestionRoomDataBase extends RoomDatabase {
             qDao.insert(new Questions("Chelsea holds the lowest absorption record in the Premier League?","True", "Man City holds the record", "Man United holds the record","Arsenal holds the record", 1,"Sport", "en"));
             qDao.insert(new Questions("The Olympics are held every how many years?","5", "2", "4","8", 3,"Sport", "en"));
             qDao.insert(new Questions("Real Madrid record holders of Champions League wins","True", "Man City Holds The Record", "Milan Holds The Record","Man United Holds The Record", 1,"Sport", "en"));
-            qDao.insert(new Questions("Yossi Benayoun scored a goal against Real Madrid","Scored vs Barcelona", "False", "He never scored in the UCL","True",  4,"Sport", "en"));
+            qDao.insert(new Questions("Yossi Benayoun scored a goal against Real Madrid","Scored vs Barcelona", "Scored vs Chelsea", "He never scored in the UCL","True",  4,"Sport", "en"));
             qDao.insert(new Questions("Cristiano Ronaldo plays for","Portugal", "Spain", "Argentina","Israel", 1,"Sport", "en"));
-            qDao.insert(new Questions("The record holder of titles in tennis is Novak Djokovic","True", "No, Andy Murray holds the record", "No, Federer holds the record","No, Sahar Peer holds the record", 4,"Sport", "en"));
+            qDao.insert(new Questions("The record holder of titles in tennis is Novak Djokovic","True", "No, Andy Murray holds the record", "No, Federer holds the record","No, Rafael Nadal holds the record", 4,"Sport", "en"));
             qDao.insert(new Questions("Which of the following won the Champions League","Neymar", "Paul Pogba", "Antoine Griezmann","Jack Wilshere", 1,"Sport", "en"));
             qDao.insert(new Questions("Which of the following clubs is not from London","Tottenham", "Chelsea", "Everton","Arsenal", 3,"Sport", "en"));
             qDao.insert(new Questions("Andy Murray won Wimbledon in 2016","No. Won in 2013", "True", "No. Won in 2015.","No. Won in 2014.", 2,"Sport", "en"));
@@ -80,9 +80,9 @@ public abstract class QuestionRoomDataBase extends RoomDatabase {
             qDao.insert(new Questions("צ'לסי מחזיקה בשיא הספיגות הנמוך ביותר בפריימרליג","נכון", "מנצ'סטר סיטי מחזיקה בשיא", "מנצ'סטר יונייטד מחזיקה בשיא","ארסנל מחזיקה בשיא", 1,"ספורט", "he"));
             qDao.insert(new Questions("בכל כמה שנים מתקיימת האולימפיאדה?","5", "2", "4","8", 3,"ספורט", "he"));
             qDao.insert(new Questions("ריאל מדריד שיאנית זכיות ליגת האלופות","צ'לסי מחזיקה בשיא", "נכון", "מנצ'סטר יונייטד מחזיקה בשיא","מילאן מחזיקה בשיא", 2,"ספורט", "he"));
-            qDao.insert(new Questions("יוסי בניון כבש שער נגד ריאל מדריד","כבש נגד ברצלונה", "לא נכון", "לא כבש מעולם בליגת האלופות","נכון",  4,"ספורט", "he"));
+            qDao.insert(new Questions("יוסי בניון כבש שער נגד ריאל מדריד","כבש נגד ברצלונה", "כבש נגד צ'לסי", "לא כבש מעולם בליגת האלופות","נכון",  4,"ספורט", "he"));
             qDao.insert(new Questions("כריסטיאנו רונאלדו משחק עבור","פורטוגל", "ספרד", "ארגנטינה","ישראל", 1,"ספורט", "he"));
-            qDao.insert(new Questions("ג'וקוביץ' מחזיק בכמות התארים הגדולה ביותר של טניסאי בהיסטוריה","נכון", "אנדי מארי מחזיק בשיא זה", "פדרר מחזיק בשיא זה","שחר פאר מחזיקה בשיא זה", 4,"ספורט", "he"));
+            qDao.insert(new Questions("ג'וקוביץ' מחזיק בכמות התארים הגדולה ביותר של טניסאי בהיסטוריה","נכון", "אנדי מארי מחזיק בשיא זה", "פדרר מחזיק בשיא זה","רפאל נדאל מחזיק בשיא זה", 4,"ספורט", "he"));
             qDao.insert(new Questions("מי מהבאים זכה בליגת האלופות","ניימאר", "פול פוגבה", "אנטואן גריזמן","ג'ק ווילשר", 1,"ספורט", "he"));
             qDao.insert(new Questions("מי מהמועדנים הבאים אינו מלונדון","טוטנהאם", "צ'לסי", "אברטון","ארסנל", 3,"ספורט", "he"));
             qDao.insert(new Questions("אנדי מארי זכה בווימבלדון בשנת 2016","זכה ב2013", "נכון", "זכה ב2015","זכב ב2014", 2,"ספורט", "he"));
@@ -111,7 +111,7 @@ public abstract class QuestionRoomDataBase extends RoomDatabase {
 
 
             qDao.insert(new Questions("מה הוא שמו האמיתי של אלטון ג'ון","פ'ול דיוויד", "רובין פנטי", "סטיב הארדווי ג'נקינס","רדינאלד דוויט", 4,"מוזיקה", "he"));
-            qDao.insert(new Questions("ישראל זכתה בארוויזיון בפעם הראשונה בשנת ___","אף תשובה לא נכונה", "1966", "1959","1988", 1,"מוזיקה", "he"));
+            qDao.insert(new Questions("ישראל זכתה בארוויזיון בפעם הראשונה בשנת ___","אף תשובה אינה נכונה", "1966", "1959","1988", 1,"מוזיקה", "he"));
             qDao.insert(new Questions("ליאור נרקיס ייצג את ישראל בארוויזיון?","לא, חיים איפרגן ייצג", "נכון", "לא, יהודה לוי ייצג","לא, ראובן המלאך ייצג", 2,"מוזיקה", "he"));
             qDao.insert(new Questions("באיזו שנה יצאו לאור שירו של ג'סטין ביבר בייבי?","2012", "2009", "2006","2007", 2,"מוזיקה", "he"));
             qDao.insert(new Questions("מה השם האמיתי של ראובן המלאך?","ראובן לוי", "ראובן אלפסי", "ראובן שמעוני","ראובן כהן", 3,"מוזיקה", "he"));
@@ -206,7 +206,7 @@ public abstract class QuestionRoomDataBase extends RoomDatabase {
             qDao.insert(new Questions("Quba okra belongs to the Iraqi community","Marrocco", "England", "French","True", 4,"Food", "en"));
             qDao.insert(new Questions("The origin of the khachapuri is in ___","Australian", "Vienna", "Georgia","Island", 3,"Food", "en"));
             qDao.insert(new Questions("One of the ingredients in hummus is Thina","Parsley", "True", "Mushroom","Garlic", 2,"Food", "en"));
-            qDao.insert(new Questions("Tabasco was invented in ___","Japan", "China", "True","Spain", 4,"Food", "en"));
+            qDao.insert(new Questions("Tabasco was invented in ___","Japan", "China", "True","U.S.A", 4,"Food", "en"));
             qDao.insert(new Questions("The most eaten food in the world is rice","True", "Chick", "Salad","Chicken", 1,"Food", "en"));
             qDao.insert(new Questions("Chicken is part of its origin in the ___","Cow", "Goat", "Chicken is vegetarian","Chicken", 4,"Food", "en"));
             qDao.insert(new Questions("Tea is the most consumed drink in the world","Water is the drink", "Cola is the drink", "True","Beer is the drink", 3,"Food", "en"));
@@ -222,10 +222,10 @@ public abstract class QuestionRoomDataBase extends RoomDatabase {
             qDao.insert(new Questions("קובה במיה שייך לעדה העיראקית","מרוקאית", "אנגלית", "צרפתית","נכון", 4,"אוכל", "he"));
             qDao.insert(new Questions("מקור החצ'פורי הוא ב___","גאורגיה", "אוסטרליה", "וינה","איסלנד", 1,"אוכל", "he"));
             qDao.insert(new Questions("המרכיב העיקרי בחומוס הוא טחינה","פטרוזיליה", "נכון", "פטריות","שום", 2,"אוכל", "he"));
-            qDao.insert(new Questions("הטבסקו הומצא במקסיקו","יפן", "סין", "נכון","ספרד", 4,"אוכל", "he"));
+            qDao.insert(new Questions("הטבסקו הומצא במקסיקו","יפן", "סין", "נכון","ארצות הברית", 4,"אוכל", "he"));
             qDao.insert(new Questions("המאכל הנאכל ביותר בעולם הוא ___","אורז", "פרגיות", "סלט","עוף", 1,"אוכל", "he"));
             qDao.insert(new Questions("תה הוא המשקה הנצרך ביותר בעולם","מים", "קולה", "נכון","בירה", 3,"אוכל", "he"));
-            qDao.insert(new Questions("עישון בשר הוא הרקבה הכנה מבוקר של הבשר","נכון", "תהליך של שימון", "תהליך של הקפאה","תהליך של חיתוך", 1,"אוכל", "he"));
+            qDao.insert(new Questions("עישון בשר הוא תהליך הרקבה מבוקר של הבשר","נכון", "תהליך של שימון", "תהליך של הקפאה","תהליך של חיתוך", 1,"אוכל", "he"));
             qDao.insert(new Questions("תה עם חלב מקורו ב___","פינלנד", "אנגליה", "ישראל","ספרד", 2,"אוכל", "he"));
             qDao.insert(new Questions("מקדונלדס היא הרשת שמוכרת את מנת הביג מק","בורגראנץ", "נכון", "בורגר קינג","האדסון", 2,"אוכל", "he"));
             qDao.insert(new Questions("המרכיב העיקרי בפלאפל הוא ___","טחינה", "חומוס", "ירק","שמן", 2,"אוכל", "he"));
