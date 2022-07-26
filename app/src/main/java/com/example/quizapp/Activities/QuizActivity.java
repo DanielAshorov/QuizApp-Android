@@ -38,8 +38,8 @@ public class QuizActivity extends AppCompatActivity {
     TextView textViewScore,textViewQuestionCount,textViewCountDownTimer;
     private static String scoreText;
     private static String questionText;
-    RadioButton rb1,rb2,rb3,rb4;
     RadioGroup rbGroup;
+    RadioButton rb1,rb2,rb3,rb4;
     Button buttonNext;
     boolean answered = false;
     List<Questions> quesList;
@@ -48,8 +48,8 @@ public class QuizActivity extends AppCompatActivity {
     private QuestionViewModel questionViewModel;
     private ColorStateList textColorButtons;
     private Handler handler = new Handler();
-    private int correctAns = 0, wrongAns =0;
-    private int score=0;
+    private int correctAns = 0, wrongAns = 0;
+    private int score = 0;
     private TimerDialog timerDialog;
     private WrongDialog wrongDialog;
     private CorrectDialog correctDialog;
@@ -70,9 +70,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-
         setupUI();
-        // this is used to change the text colors of the buttons
         textColorButtons = rb1.getTextColors();
         String answerText = getString(R.string.the_correct_answer_is);
         timerDialog =  new TimerDialog(this);
@@ -120,14 +118,14 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-        //get all questions from DB and make shuffle between question according category
+        //getting questions from DB and doing shuffle between them by category
     private void fetchContent(List<Questions> questions) {
         quesList = questions;
         Collections.shuffle(quesList);
         startQuiz();
     }
 
-    // SetQuestionsView() Method  move all questions according to category
+    // moving all questions according to their category
     public void setQuestionView(){
 
         rbGroup.clearCheck();
@@ -181,7 +179,7 @@ public class QuizActivity extends AppCompatActivity {
                 switch (checkedId){
 
                     case R.id.radio_button1:
-                        rb1.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.textactivityColor));
+                        rb1.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.colorAccent));
                         rb2.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         rb3.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         rb4.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
@@ -189,7 +187,7 @@ public class QuizActivity extends AppCompatActivity {
 
                     case R.id.radio_button2:
                         rb1.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
-                        rb2.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.textactivityColor));
+                        rb2.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.colorAccent));
                         rb3.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         rb4.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         break;
@@ -197,7 +195,7 @@ public class QuizActivity extends AppCompatActivity {
                     case R.id.radio_button3:
                         rb1.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         rb2.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
-                        rb3.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.textactivityColor));
+                        rb3.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.colorAccent));
                         rb4.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         break;
 
@@ -205,7 +203,7 @@ public class QuizActivity extends AppCompatActivity {
                         rb1.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         rb2.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         rb3.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
-                        rb4.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.textactivityColor));
+                        rb4.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.colorAccent));
                         break;
 
                     default:
@@ -213,7 +211,6 @@ public class QuizActivity extends AppCompatActivity {
                         rb2.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         rb3.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
                         rb4.setBackgroundTintList(ContextCompat.getColorStateList(QuizActivity.this, R.color.questionPink));
-
                 }
             }
         });
