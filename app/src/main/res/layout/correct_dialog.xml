@@ -4,6 +4,7 @@
     android:layout_width="300dp"
     android:layout_gravity="center"
     android:background="#D4F6CC"
+
     android:layout_height="275dp">
 
 
