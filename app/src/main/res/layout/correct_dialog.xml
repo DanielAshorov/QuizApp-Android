@@ -3,7 +3,8 @@
     android:orientation="vertical"
     android:layout_width="300dp"
     android:layout_gravity="center"
-    android:background="@color/purple_500"
+    android:background="#D4F6CC"
+
     android:layout_height="275dp">
 
 
@@ -43,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/txt_correct_dialog_ok"
-        android:backgroundTint="#ab2fb7"
+        android:backgroundTint="#FFBBCC"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="35sp"

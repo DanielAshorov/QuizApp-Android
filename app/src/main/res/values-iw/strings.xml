@@ -28,7 +28,7 @@
     <string name="correct_email_address">כתובת מייל שגויה</string>
     <string name="score_text2">ניקוד נוכחי: </string>
     <string name="button_return_home">חזור לדף הבית</string>
-    <string name = "editTextTextPersonName">בחר קטגוריה: </string>
+    <string name = "Category">בחר קטגוריה: </string>
     <string name = "bt_Sport">ספורט </string>
     <string name = "bt_Music">מוזיקה </string>
     <string name = "bt_Movies">סרטים </string>

@@ -28,7 +28,7 @@
     <string name="score_text2">Current Score: </string>
     <string name="Return_home_button_text">Return Home</string>
     <string name="button_return_home">Return Home</string>
-    <string name="editTextTextPersonName">Choose Category: </string>
+    <string name="Category">Choose Category: </string>
     <string name="bt_Sport">Sport</string>
     <string name="bt_Music">Music </string>
     <string name="bt_Movies">Movies</string>
