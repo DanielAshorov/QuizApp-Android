@@ -15,8 +15,8 @@ public class ResultActivity extends AppCompatActivity {
 
     TextView txtHighScore;
     TextView txtTotalQuizQuestion, txtCorrectQuestion, txtWrongQuestion, txtYourScore;
-    Button btMainMenu;
-    int highScore =0;
+    Button playAgain;
+    int highScore = 0;
     private String category;
     private static final String SHARED_PREFERENCE = "shared_preference";
     private static final String SHARED_PREFERENCE_HIGH_SCORE = "shared_preference_high_score_";
@@ -32,7 +32,7 @@ public class ResultActivity extends AppCompatActivity {
         txtTotalQuizQuestion = findViewById(R.id.result_tv_Num_of_Ques);
         txtCorrectQuestion = findViewById(R.id.result_tv_correct_Ques);
         txtWrongQuestion = findViewById(R.id.result_tv_wrong_Ques);
-        btMainMenu = findViewById(R.id.bt_result_main_menu);
+        playAgain = findViewById(R.id.bt_result_main_menu);
 
         Intent intent = getIntent();
         int score = intent.getIntExtra("UserScore",0);
@@ -41,7 +41,7 @@ public class ResultActivity extends AppCompatActivity {
         int wrongQuestion = intent.getIntExtra("WrongQuestions",0);
         category  = intent.getStringExtra("Category");
 
-        btMainMenu.setOnClickListener(new View.OnClickListener() {
+        playAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -67,7 +67,6 @@ public class ResultActivity extends AppCompatActivity {
             startActivity(newHighScoreIntent, b);
 
             startActivity(newHighScoreIntent);
-            /// add some event that tells the client he has the highest score.
         }
         else
         {
