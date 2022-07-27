@@ -53,31 +53,33 @@
         style="@style/ButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#D18CE0"
-
-        android:background="@android:color/transparent"
         android:text="@string/login_text"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#AA2EE6"
+        android:background="@drawable/round"
+        android:layout_margin="20dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="@string/or_text_"
-        android:textColor="@color/light_gray_txt_color"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 
 
     <Button
         android:id="@+id/create_acct_button_login"
-        style="@style/ButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
         android:text="@string/create_text"
-        android:textColor="#D18CE0"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#AA2EE6"
+        android:background="@drawable/round"
+        android:layout_margin="20dp"/>
 
 
 </LinearLayout>

@@ -54,7 +54,7 @@
     <string name="bt_finalScore_ok">OK  </string>
     <string name="txt_TimesUp">Times Up!  </string>
     <string name="txt_GameOver">Game Over  </string>
-    <string name="bt_Times_ok">OK  </string>
+    <string name="bt_Times_ok">Play again  </string>
     <string name="double_back_bt_exit">Press back again to exit</string>
     <string name="select_answer">Please select an Answer</string>
     <string name="question_txt">Question</string>
@@ -65,5 +65,7 @@
     <string name="global_movies"> movies</string>
     <string name="global_food"> food</string>
     <string name="newHighScore">Congrats you have reached a new high score: </string>
+    <string name="high_score_main_menu">Main menu </string>
+
 
 </resources>

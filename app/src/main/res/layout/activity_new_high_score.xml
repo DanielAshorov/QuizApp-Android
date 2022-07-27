@@ -36,7 +36,7 @@
         android:background="@drawable/round"
         android:layout_margin="50dp"
         android:backgroundTint="#F7F7F7"
-        android:text="@string/bt_result_main_menu"
+        android:text="@string/high_score_main_menu"
         android:textColor="#C84B31"
         app:layout_constraintBottom_toBottomOf="@+id/konfettiView"
         app:layout_constraintEnd_toEndOf="parent"
